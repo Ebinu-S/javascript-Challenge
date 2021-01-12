@@ -1,5 +1,4 @@
 const myBday = '6 Feb 2021';
-const myBday = '12 Jan 2021';
 
 const days_e =  document.getElementById("days");
 const hours_e =  document.getElementById("hours");
@@ -22,7 +21,7 @@ function countdown(){
 
     if(minutes <= 0 && hours <= 0 && days <= 0){
         cCounter.style.display = "none";
-        mainHead.innerHTML = "Happy Birthday Kutta "
+        mainHead.innerHTML = "Happy Birthday Kutta ";
     }
     else{
         days_e.innerHTML = formatText(days);
@@ -38,4 +37,4 @@ function formatText(time){
 
 countdown()
 
-setInterval(countdown,1000)
+setInterval(countdown, 1000)
