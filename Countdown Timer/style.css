@@ -1,10 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
+    font-family: "Oswald", sans-serif;
+    margin: 2em 0;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0%;
+}
+
+p {
+    /* margin: 0; */
+}
+
+.countdown-container{
+    display: flex;
+    justify-content: center;
+}
+
+.big-text{
+    font-size: 6em;
+    line-height: 1;
+    font-weight: bold;
+    margin: 1rem  2rem;
+}
+
+.countdown-el{
+    /* margin: 0 1em; */
 }
