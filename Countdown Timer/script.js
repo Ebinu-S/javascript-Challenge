@@ -1,5 +1,5 @@
 const myBday = '6 Feb 2021';
-// const myBday = '12 Jan 2021';
+const myBday = '12 Jan 2021';
 
 const days_e =  document.getElementById("days");
 const hours_e =  document.getElementById("hours");
