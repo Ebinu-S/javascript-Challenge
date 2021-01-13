@@ -15,9 +15,7 @@ body {
     margin: 0%;
 }
 
-p {
-    /* margin: 0; */
-}
+
 
 .countdown-container{
     display: flex;
@@ -32,6 +30,3 @@ p {
     margin: 1rem  2rem;
 }
 
-.countdown-el{
-    /* margin: 0 1em; */
-}
