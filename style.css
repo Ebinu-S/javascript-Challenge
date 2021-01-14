@@ -12,6 +12,9 @@ body {
     overflow: hidden;
     text-align: center;
     align-items: center;
+    background-color: #fee2f8;
+    background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+    
 }
 
 h1{
@@ -24,6 +27,7 @@ a{
     font-size: 1.5rem;
     padding: 0 3rem;
     text-decoration: none;
+    transition: .3s;
 }
 
 a:hover{
@@ -33,4 +37,32 @@ a:hover{
 .container{
     display: flex;
     flex-direction: column;
+}
+
+#mainC{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    color: #537895;
+}
+
+.linkC{
+    background-color: #0D0106;
+    border: 0;
+    border-radius: 3rem;
+    height: 100vh;
+    width: 50vh;
+    margin: 0 3rem;
+    overflow: scroll;
+}
+
+.linkC::-webkit-scrollbar{
+    display: none;
 }
