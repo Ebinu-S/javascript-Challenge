@@ -1,5 +1,12 @@
 const questionEl = document.getElementById("question");
 
+const a_text = document.getElementById("a_text")
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+
+const currentQuiz = 0; 
+
 const quiz_questions = [
     {
         question: "What is Ebinu Suneer's age?",
@@ -47,7 +54,15 @@ const quiz_questions = [
 ]
 
 function loadQuiz(){
-    questionEl.innerHTML = quiz_questions[0].question;
+
+    const currentQuizData = quiz_questions[currentQuiz];
+
+    console.log(currentQuizData.a);
+    questionEl.innerText = currentQuizData.question;
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
 }
 
 loadQuiz()
