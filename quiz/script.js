@@ -5,7 +5,11 @@ const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 
-const currentQuiz = 0; 
+const answerEls = document.querySelectorAll(".answer");
+const quizCon = document.getElementById("quiz-container");
+
+var currentQuiz = 0; 
+let score = 0;
 
 const quiz_questions = [
     {
@@ -55,9 +59,10 @@ const quiz_questions = [
 
 function loadQuiz(){
 
+    deselectQuiz();
+    
     const currentQuizData = quiz_questions[currentQuiz];
 
-    console.log(currentQuizData.a);
     questionEl.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
@@ -65,4 +70,56 @@ function loadQuiz(){
     d_text.innerText = currentQuizData.d;
 }
 
-loadQuiz()
+loadQuiz();
+
+function selectAnswer(){
+    
+    let answer = undefined;
+
+    answerEls.forEach((answerEl) => {
+        if(answerEl.checked){
+            answer= answerEl.id;
+        }
+    });
+
+    return answer;
+
+}
+
+function deselectQuiz() { 
+    answerEls.forEach((answerEl) => {
+        answerEl.checked = false;
+    })
+ }
+
+submit.addEventListener('click', () => {
+
+    const answer = selectAnswer();
+    if(answer){
+        
+        if(answer === quiz_questions[currentQuiz].correct){
+            score++;
+        }
+
+        currentQuiz++;
+
+        if(currentQuiz < quiz_questions.length){
+            loadQuiz(currentQuiz);
+        }
+        else{
+            if (score < quiz_questions.length/2){
+                quizCon.style.backgroundColor = "#FE4134";
+                quizCon.style.color = '#FEFFD6';
+            }
+            else{
+                quizCon.style.backgroundColor = "#03C956";
+                quizCon.style.color = '#EBEBEB';
+            }
+            quizCon.innerHTML = `
+            <h2 id="finalText">You have scored ${score} out of ${quiz_questions.length}.</h2>
+            <button onclick = "location.reload()">Retry</button>
+            `
+        }
+    } 
+    
+} );

@@ -27,6 +27,7 @@ body {
 
 .quiz-main{
     padding: 3rem;
+    max-height: 60vh;
 }
 
 button{
@@ -45,6 +46,11 @@ button:hover{
     background-color: #4242bb;
 }
 
+button:focus{
+    outline: 0;
+    background-color: #2c2c7c;
+}
+
 ul{
     list-style-type: none;
     padding: 0;
@@ -54,3 +60,10 @@ ul li{
     margin: 1rem 0;
 }
 
+ul li label{
+    cursor: pointer;
+}
+
+#finalText  {
+    padding: 3rem;
+}
