@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #0D1821;
+    overflow: hidden;
+}
+
+.fas{
+    top: -45px;
+    animation: fall 10s linear forwards;
+    position: absolute;
+}
+
+.fa-grin-squint-tears {
+    color: #CEEC97;
+}
+
+.fa-grin-hearts{
+    color: #F9B9C3;
+}
+
+.fa-frown{
+    color: #70798C;
+}
+
+@keyframes fall{
+    to {
+        transform: translateY(110vh);
+    }
+}

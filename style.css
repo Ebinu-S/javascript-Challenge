@@ -49,6 +49,12 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
+
+#anim{
+    display: flex;
+    flex-direction: column;
+}
+
 h3{
     color: #537895;
 }
@@ -56,13 +62,35 @@ h3{
 .linkC{
     background-color: #0D0106;
     border: 0;
-    border-radius: 3rem;
-    height: 100vh;
+    border-radius: 2rem;
+    height: 70vh;
     width: 50vh;
     margin: 0 3rem;
     overflow: scroll;
+    transition: .3s;
+}
+
+.linkC:hover{
+    height: 71vh;
+    width: 51vh;
 }
 
 .linkC::-webkit-scrollbar{
     display: none;
+}
+
+.fas{
+    position: absolute;
+    top: -35px;
+    animation: fall linear forwards;
+    z-index: -5;   
+    /* color: #537895; */
+    color: transparent;
+    text-shadow: 0 0 1px #537895df;
+}
+
+@keyframes fall{
+    to{
+        transform: translateY(120vh);
+    }
 }
