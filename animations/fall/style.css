@@ -29,6 +29,17 @@ body {
     color: #70798C;
 }
 
+button {
+    flex: bottom;
+    z-index: 1;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+
 @keyframes fall{
     to {
         transform: translateY(110vh);

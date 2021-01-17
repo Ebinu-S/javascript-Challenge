@@ -1,0 +1,68 @@
+/* 
+--tea-green: #cce8ccff;
+--isabelline: #f6efeeff;
+--pink-lavender: #e2b6cfff;
+--plum-web: #e396dfff;
+--orchid: #e365c1ff;
+--dark-purple: #210124ff;
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* background-color: #E2B6CF; */
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 4rem;
+    opacity: .6;
+    /* color: #7f5a83; */
+    color: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+
+}
+
+.todos{
+    list-style-type: none;
+    padding : 1rem 0;
+    /* margin: 20px 0; */
+    background-color: #F6EFEE;
+}
+
+ul{
+    margin: 1px 0 0 0 ;
+}
+
+#input{
+    border: 0;
+    padding: 2.2rem;
+    font-size: 1.4rem;
+    background-color: #F6EFEE;
+    display: block;
+    width: 400px;
+    margin: 0;
+    outline: 0;
+    box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.256) ;
+}
+
+.todo{
+    font-size: 1.5rem;
+}
+
+form {
+    max-width: 100%;
+    width: 400px;
+}
+
