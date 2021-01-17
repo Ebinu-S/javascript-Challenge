@@ -55,14 +55,22 @@ ul{
     width: 400px;
     margin: 0;
     outline: 0;
-    box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.256) ;
+    box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.256);
+    color: #4F172B;
+
 }
 
 .todo{
     font-size: 1.2rem;
     border-top: 2px dotted #e2b6cf88 ;
     padding: 1rem 0;
+    transition: .5s;
     cursor: pointer;
+    color: #37023C;
+}
+
+.todo:hover{
+    background-color: #F5CCEA;
 }
 
 form {
@@ -77,6 +85,7 @@ form {
 .completed{
     text-decoration: line-through;
     color:  #bb89a49c; 
+    background-color: #CCE8CC;
 }
 small{
     background-color: #F6EFEE;
