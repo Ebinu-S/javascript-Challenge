@@ -9,13 +9,14 @@
 <body>
 
     <h1>TODO</h1>
-    <form class="todo-container">
+    <form class="todo-container" id="form">
         <input type="text" id="input" class= 'input' placeholder="Enter your TODO" autocomplete="off" />
-        <ul class="todos">
-            <li class="todo">This is one</li>
-            <li class="todo">This is two</li>
+        <ul id="todos">
         </ul>
     </form>
+    <small>
+        Left click to toggle between complete. <br> Right click to delete.
+    </small>
     
     <script src="script.js"></script>
 </body>
