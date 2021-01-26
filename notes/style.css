@@ -18,21 +18,25 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    margin: 0;
+    margin: 0;  
     background-color: #7f53ac;
-background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
-
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    display: flex;
+    flex-wrap: wrap;
     min-height: 100vh;
     color: #0b0a07ff;
+    padding-top: 3rem;
 }
 
 button{
     border : none;
+    background: transparent;
+    cursor: pointer;
 }
 
 .notes{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     /* background-color: #ECE4B7; */
     margin: 2rem 1rem;
 }
@@ -51,10 +55,50 @@ button{
 }
 
 .notes textarea{
-    height: 350px;
+    height: 300px;
+    border: none;
+    width: 100%;
+    background-color: #E4FDE1;
+    padding: 1rem;
+}
+
+.note{
+    display: flex;
+    flex-direction: column;
+}
+
+#addBtn{
+    font-size: 16px;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: block;
+}
+
+#addBtn:focus{
+    outline: 0;
+}
+
+.main{
+    height: 300px;
     border: none;
     width: 100%;
     background-color: #E4FDE1;
     padding: 3px;
 }
 
+.hidden{
+    display: none;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
