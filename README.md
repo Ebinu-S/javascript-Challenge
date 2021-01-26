@@ -1,6 +1,6 @@
 # javascript-Challenge
 
-👋 hey there. As part of learning JavaScript. I've challenged myself to create small applications.
+👋 hey there. As part of learning JavaScript. I've challenged myself to create small applications using vanilla js.
 
 What I've done so far 🤓👇
 
