@@ -3,9 +3,10 @@ const addbtn = document.getElementById('addBtn');
 const textValue = JSON.parse(localStorage.getItem('notes'));
 
 if(textValue){
-    
     textValue.forEach((value) => {
-        addNote(value);
+        if(value !== ''){
+            addNote(value);
+        }
     })
 }
 
@@ -33,15 +34,13 @@ function addNote(text = '') {
 
     const editBtn = note.querySelector('.editBtn');
     const removeBtn = note.querySelector('.removeBtn');
+    const toolsBar = note.querySelector('.tools');
 
     textArea.value = text;
     main.innerHTML = marked(text);
     
     editBtn.addEventListener('click', (e)=>{
-
-        textArea.classList.toggle('hidden');
-        main.classList.toggle('hidden');   
-
+        toggleHidden(textArea,main);
     });
 
     removeBtn.addEventListener('click', ()=>{
@@ -58,6 +57,22 @@ function addNote(text = '') {
         updateLs();
 
     } );
+
+    textArea.addEventListener('blur' ,()=>{
+        toggleHidden(textArea,main);
+    });
+
+    removeBtn.addEventListener('mouseover', () => {
+        toolsBar.style.background = '#EF5B5B';
+    });
+
+    editBtn.addEventListener('mouseover', () => {
+        toolsBar.style.background = '#FFBA49';
+    })
+
+    toolsBar.addEventListener('mouseout', ()=> {
+        toolsBar.style.background = '#78e08f';
+    })
 
     document.body.appendChild(note); 
 
@@ -76,6 +91,9 @@ function updateLs() {
     });
 
     localStorage.setItem('notes',JSON.stringify(notes));
-    console.log('uls' + notes);
- }
+ };
 
+function toggleHidden(textArea,main) { 
+    textArea.classList.toggle('hidden');
+    main.classList.toggle('hidden');  
+ };

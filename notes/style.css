@@ -20,12 +20,12 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;  
     background-color: #7f53ac;
-    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    background-image: linear-gradient(315deg, #624183 0%, #586fd1 74%);
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
     color: #0b0a07ff;
-    padding-top: 3rem;
+    padding: 3rem 2rem;
 }
 
 button{
@@ -35,8 +35,8 @@ button{
 }
 
 .notes{
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     /* background-color: #ECE4B7; */
     margin: 2rem 1rem;
 }
@@ -45,7 +45,7 @@ button{
     display: flex;
     justify-content: flex-end;
     padding: 10px 2px;
-    background-color: #678D58;
+    background-color: #78e08f;
 }
 
 .tools button{
@@ -54,12 +54,15 @@ button{
     background: transparent;
 }
 
+
+
 .notes textarea{
-    height: 300px;
+    height: 270px;
     border: none;
     width: 100%;
-    background-color: #E4FDE1;
+    background-color: #bafad4;
     padding: 1rem;
+    resize: none;
 }
 
 .note{
@@ -68,23 +71,36 @@ button{
 }
 
 #addBtn{
-    font-size: 16px;
+    font-size: 1.52rem;
     position: absolute;
     right: 1rem;
     top: 1rem;
-    display: block;
+    color: #78e08f;
+    background: transparent;
+}
+
+#addBtn:hover{
+    color: #FFBA49;
 }
 
 #addBtn:focus{
     outline: 0;
 }
 
+#heading{
+    position: absolute;
+    top: 1rem;
+    margin: 0;
+    left : 3rem;
+    color : #fafafa;
+}
+
 .main{
-    height: 300px;
+    height: 270px;
     border: none;
     width: 100%;
     background-color: #E4FDE1;
-    padding: 3px;
+    padding: 1rem;
 }
 
 .hidden{
@@ -101,4 +117,8 @@ button:focus{
 
 body::-webkit-scrollbar{
     display: none;
+}
+
+.notes{
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 }
