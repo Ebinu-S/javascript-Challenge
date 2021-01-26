@@ -2,7 +2,10 @@ const addbtn = document.getElementById('addBtn');
 
 const textValue = JSON.parse(localStorage.getItem('notes'));
 
+var indexNoValue = 0;
+
 if(textValue){
+
     textValue.forEach((value) => {
         if(value !== ''){
             addNote(value);
@@ -16,10 +19,12 @@ addbtn.addEventListener('click', () => {
 })
 
 function addNote(text = '') { 
+
     const note = document.createElement('div'); // eee notinnote
     note.classList.add('note');
-
-    note.innerHTML = `<div class="notes">
+    indexNoValue++;
+    note.innerHTML = `<div id="indexNo">0</div>
+                        <div class="notes">
                         <div class="tools">
                             <button title="Edit" class="editBtn"> <i class="fas fa-edit"></i> </button>
                             <button title="Remove" class="removeBtn"> <i class="fas fa-minus-square"></i> </button>
@@ -35,6 +40,10 @@ function addNote(text = '') {
     const editBtn = note.querySelector('.editBtn');
     const removeBtn = note.querySelector('.removeBtn');
     const toolsBar = note.querySelector('.tools');
+
+    const indexNumEl = note.querySelector('#indexNo');
+
+    indexNumEl.innerText = indexNoValue;
 
     textArea.value = text;
     main.innerHTML = marked(text);
@@ -64,19 +73,23 @@ function addNote(text = '') {
 
     removeBtn.addEventListener('mouseover', () => {
         toolsBar.style.background = '#EF5B5B';
+        indexNumEl.style.background = '#EF5B5B';
     });
 
     editBtn.addEventListener('mouseover', () => {
         toolsBar.style.background = '#FFBA49';
+        indexNumEl.style.background = '#FFBA49';
     })
 
     toolsBar.addEventListener('mouseout', ()=> {
         toolsBar.style.background = '#78e08f';
+        indexNumEl.style.background = '#78e08f';
     })
 
     document.body.appendChild(note); 
 
     updateLs();
+
  }
 
 // Updating and saving files to LocalStorage 
@@ -91,9 +104,12 @@ function updateLs() {
     });
 
     localStorage.setItem('notes',JSON.stringify(notes));
+
  };
 
 function toggleHidden(textArea,main) { 
+
     textArea.classList.toggle('hidden');
     main.classList.toggle('hidden');  
+
  };
