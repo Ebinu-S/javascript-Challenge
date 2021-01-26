@@ -9,25 +9,25 @@ What I've done so far 🤓👇
 
 * Countdown Timer
 
-  ![image](https://user-images.githubusercontent.com/54814859/105814033-c05ea400-5fd6-11eb-9dde-57e71e9a622c.png)
-
+  ![bday1](https://user-images.githubusercontent.com/54814859/105850310-9671a580-6007-11eb-84e6-c1875826fecc.png)
+  
   First Challenge. A Simple Countdown to my birthday.
   
 * Quiz
 
-  ![image](https://user-images.githubusercontent.com/54814859/105814151-f4d26000-5fd6-11eb-9923-dc1be6d574f5.png)
+  ![q1](https://user-images.githubusercontent.com/54814859/105850316-97a2d280-6007-11eb-854f-37ade1d69856.png)
   
   A simple Quiz App.
   
 * TODO
   
-  ![image](https://user-images.githubusercontent.com/54814859/105814227-10d60180-5fd7-11eb-96a3-75824e4a2f8f.png)
+  ![todo](https://user-images.githubusercontent.com/54814859/105850317-983b6900-6007-11eb-99dc-43a6eadcd77f.png)
   
   A TODO app to keep up with goals.
 
 * Notes
 
-  ![image](https://user-images.githubusercontent.com/54814859/105814309-38c56500-5fd7-11eb-9fa5-f67e92e50620.png)
+  ![note](https://user-images.githubusercontent.com/54814859/105850314-970a3c00-6007-11eb-9227-de812a312114.png)
   
   A Notes app to write notes.
 
@@ -35,13 +35,13 @@ What I've done so far 🤓👇
 
 * Auto Text
 
-  ![image](https://user-images.githubusercontent.com/54814859/105814370-52ff4300-5fd7-11eb-92e8-18ad3a95f405.png)
+  ![Untitled-2@1x](https://user-images.githubusercontent.com/54814859/105850305-94a7e200-6007-11eb-9cfd-be5e5bc5a19e.png)
   
    Creates Typing Animation.
     
 * Fall elements
 
-  ![image](https://user-images.githubusercontent.com/54814859/105814453-71653e80-5fd7-11eb-80cc-9b3c3a72120c.png)
+  ![fall](https://user-images.githubusercontent.com/54814859/105850313-970a3c00-6007-11eb-815e-b75460ed14c5.png)
 
   Falling Random objects like rain.
   
