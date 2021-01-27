@@ -4,7 +4,19 @@ const todoUL = document.getElementById('todos');
 
 const todosSv = JSON.parse(localStorage.getItem('todos'));
 
-console.log(todosSv);
+
+// add date to check minimum
+// set maximum SVGFEDiffuseLightingElement
+// then alter ui to check weather exceedes time limit or not
+
+// const date = new Date();
+
+// const targetdate = $("#ip").datepicker({
+//     gotoCurrent :true
+// });
+
+// Modify on the second Challenge
+
 
 if(todosSv) {
     todosSv.forEach((todo) => {
@@ -65,7 +77,6 @@ function updateLs(){
     const todos = [];
 
     todosEl.forEach( (todoEl) => {
-        console.log('s');
         todos.push({
             text: todoEl.innerText,
             completed: todoEl.classList.contains('completed')
