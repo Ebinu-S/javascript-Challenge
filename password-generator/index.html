@@ -7,7 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <div class="pwContainer">
+        <div class="pwHeader">
+            <span id="pass">12ohs813oj19!(</span>
+            <button id="copy">Copy</button>
+        </div>
+        <div class="pw-body">
+            <div class="form-controll">
+                <label for="len">Length of the password : </label>
+                <input type="number" id="len" min="4" max="20" value="10" class="form"></div>
+            <div class="form-controll">
+            
+                <label for="lower">Include lower case : </label>
+                <input type="checkbox"  id="lower" class="form"></div>
+            <div class="form-controll">
+
+                <label for="upper">Include upper case : </label>
+                <input type="checkbox"  id="upper" class="form"></div>
+            <div class="form-controll">
+
+                <label for="number">Include numbers : </label>
+                <input type="checkbox"  id="number" class="form">
+                </div>
+            <div class="form-controll">
+
+                <label for="symbols">Include Symbols : </label>
+                <input type="checkbox"  id="symbols" class="form">
+            </div>
+            
+        </div><button id="generateBtn">Generate Password.</button>
+    </div>
+    <div id="messagebox" class="">This is a message box</div>
+
     <script src="script.js"></script>
 </body>
 </html>
