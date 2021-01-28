@@ -23,7 +23,7 @@ body {
 .recipe-container{
     color: #000;
     width: 80%;
-    height: 70vh;
+    /* height: 70vh; */
     background-color:blanchedalmond;
     box-shadow: 0 0 26px rgba(0, 0, 0, 0.2);
     border-radius: 10px 0 10px 10px;
@@ -112,6 +112,23 @@ body {
 .reloadbtn:focus{
     outline: none;
 }
+
+.rAbout{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+a{
+    color: red !important;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 body::-webkit-scrollbar{
     display: none;

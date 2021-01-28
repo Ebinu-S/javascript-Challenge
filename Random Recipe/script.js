@@ -1,6 +1,9 @@
 const imgEl = document.getElementById('imgEL');
 const headingEl = document.querySelector('.heading');
 const instrucEl = document.querySelector('.instruc');
+const rABout = document.querySelector('.rAbout');
+const ingEl =document.querySelector('.ing');
+
 
 const headingMain = document.getElementById('rld');
 const reloadbtn = document.querySelector('.reloadbtn');
@@ -21,6 +24,16 @@ function setRandomMeal(data){
     headingEl.innerHTML = data.strMeal;
     imgEl.src = data.strMealThumb;
     instrucEl.innerHTML = marked(data.strInstructions);
+    rABout.innerHTML = `
+        <p>Category : ${data.strCategory}</p>
+        <p>Area : ${data.strArea}</P>
+        <a href="${data.strYoutube} class='link' "><i class="fab fa-youtube ">Youtube</i></a>
+    `;
+
+    for (i=1 ; i<=20;i++){
+        let ingr = 'strIngredient' + i;
+        ingEl.innerHTML = `<span>${data.ingr}</span> `;
+    }
 }
 
 randomRecipe();
