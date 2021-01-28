@@ -113,13 +113,6 @@ button:focus{
     animation: messageAnim 1s ease-in-out forwards;
 }
 
-.mBoxPos{
-    background-color: #297045;
-}
-
-.mBoxNeg{
-    background-color: brown;
-}
 
 #messageTxt{
     padding: 10px;
@@ -145,6 +138,31 @@ button:focus{
 .mAnim{
     animation: messageAnimOut 1s linear backwards;
 }
+
+.mBoxPos{
+    background-color: #297045;
+}
+
+.mBoxPos button{
+    background-color: #297045;
+}
+
+.mBoxPos button:hover{
+    background-color: brown;
+}
+
+.mBoxNeg{
+    background-color: brown;
+}
+
+.mBoxNeg button{
+    background-color: brown !important;
+}
+
+.mBoxNeg button:hover{
+    background-color: #297045 !important;
+}
+
 
 @keyframes messageAnim{
     to{
