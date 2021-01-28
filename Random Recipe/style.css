@@ -1,10 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #FAFFFD;
+}
+
+.recipe-container{
+    color: #000;
+    width: 80%;
+    height: 70vh;
+    background-color:blanchedalmond;
+    box-shadow: 0 0 26px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    position: relative;
+}
+
+.image img{
+    height: 250px;
+    width: auto;
+    /* position: absolute; */
+    box-shadow: 10px 10px 10px 10px rgba(37, 37, 37, 0.03);
+    
+}
+
+.image{
+    display: flex;
+    position: relative;
+    justify-content:center;
+    align-items: center;
+    background-color: blanchedalmond;
+    height: 260px;
+    /* padding: 1rem 2rem; */
+    margin:0 1rem; 
+}
+
+.heading{
+    margin: 2rem 1rem;
+    font-size: 1.5rem;
+    /* display: block; */
+    /* margin: 10rem;    */
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+}
+
+.instruc{
+    overflow: scroll;
+    height: 350px;
+    width: auto;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color:rgb(255, 247, 235);
+}
+
+#rld{
+    cursor: pointer;
+    background:transparent;
+    border: 0;
+    margin: 2rem 1rem;
+    font-size: .8rem;
+    color: rgb(0, 0, 0);
+    transition: ease-in-out .5s;
+}
+
+#rld:hover{
+    color: rgb(85, 69, 46);
+}
+
+#rld:focus{
+    outline: none;
+}
+
+.reloadbtn{
+    position: absolute;
+    right : 0;
+    font-size: 1rem;
+    top: -2.4rem;
+    background-color:blanchedalmond;
+    border: 0;
+    padding: 10px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0    ;
+}
+
+.reloadbtn:hover{
+    background-color:rgb(255, 220, 167);
+
+}
+
+.reloadbtn:focus{
+    outline: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+.instruc::-webkit-scrollbar{
+    display: none;
 }

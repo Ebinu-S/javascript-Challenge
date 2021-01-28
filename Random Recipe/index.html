@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.1.1/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <title>Random Recipe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button id="rld" title="get random recipe"><h1>Random Recipe Generator. </h1></button>
     
+    <div class="recipe-container">
+        <button class="reloadbtn"><i class="fas fa-sync-alt"></i></button>
+        <div class="heading">
+            Name of the Recipe
+        </div>  
+        <div class="item"> 
+            <div class="image">
+                <img id="imgEL" src="https://www.themealdb.com/images/ingredients/Lime.png" alt="">
+            </div>
+            <div class="instruc">
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
