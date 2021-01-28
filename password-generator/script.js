@@ -6,7 +6,9 @@ const upperEl = document.getElementById('upper');
 const numberEl = document.getElementById('number');
 const symbolEl = document.getElementById('symbols');
 const generateBTn = document.getElementById('generateBtn');
-const messageBoxEl = document.getElementById('messagebox');
+const messageBoxEl = document.querySelector('.messageBox');
+const rmMsgBtn = document.getElementById('cross');
+
 
 const lower = 'abcdefghijklmnopqrstuvwxyz';
 const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -31,22 +33,23 @@ function getSymbol(){
 
 function passloader(){
 
-    let pass = '';
-    const len = lenEL.value;
-
-    for(i = pass.length;i < len; i++){
-        pass += generatePass();
+    if(verifyCheck()){
+        let pass = '';
+        const len = lenEL.value;
+    
+        for(i = pass.length;i < len; i++){
+            pass += generatePass();   
+        }
+        
+        messageBoxGenerate('Password Generated!',true);
+        passEl.innerHTML = pass; 
     }
 
-    if(pass = ''){
-
+    else{
+        messageBoxGenerate('Please select required fields',false);
     }
 
-    // alert(pass)
-    passEl.innerHTML = pass;
-    messageBoxEl.style.display = 'inline'; //make a function for animation ok? call set timeout?
-    messageBoxEl.classList.add('mAnim');
-    setTimeout(messageBoxDisable, 4000);
+
 };
 
 function generatePass(){
@@ -68,17 +71,65 @@ function generatePass(){
     if(numberEl.checked){
         passw.push(getNumber());
     };
-
+    
     return passw[Math.floor(Math.random() * passw.length)];
 
 }
 
 generateBTn.addEventListener('click', passloader);
 
-function messageBoxDisable(){
-    // messageBoxEl.style.display = 'none';
-        
-        // messageBoxEl.style.transform = 'transform: translate(0,-150%)';
+copybtn.addEventListener('click', ()  =>{
+    const textArea = document.createElement('textarea');
+    const pass = passEl.innerHTML;
+
+    if(pass){
+
+        textArea.value = pass;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        textArea.remove();
+        messageBoxGenerate('Password Copied to clipboard!!',true);
+    }
+});
+
+
+
+// two atributes, weather its postive or not and message text
+function messageBoxGenerate(msg,type){
+    const mBox = document.createElement('div');
+    mBox.classList.add('messageBox');
+
+    mBox.innerHTML =`
+    <span id="messageTxt">This is a sample text.</span>
+    <button id="cross">X</button>
+    `;
+
+    const rmMsgBtn = mBox.querySelector('#cross');
+    const mBoxTxt = mBox.querySelector("#messageTxt");
+
+    if(type){
+        mBox.classList.add('mBoxPos');
+    }
+    else{
+        mBox.classList.add('mBoxNeg');
+    }
+
+    mBoxTxt.innerText = msg;
+
+    rmMsgBtn.addEventListener('click',  () => {
+        mBox.remove();
+    })
+
+    document.body.appendChild(mBox);
+
+    setTimeout( ()=>{
+        mBox.remove();
+    },10000);
+
 }
 
-// add copy functionlalies
+function verifyCheck() { 
+    return symbolEl.checked || numberEl.checked || lowerEl.checked || upperEl.checked;
+ }
+

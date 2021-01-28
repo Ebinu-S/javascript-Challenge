@@ -19,6 +19,10 @@ body {
     overflow: hidden;
 }
 
+h1{
+    font-size: 2rem;
+    color:white;
+}
 .pwContainer{
     display: flex;
     flex-direction: column;
@@ -27,7 +31,7 @@ body {
     background-color: #50437e;
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    /* max-width: 600px; */
+    /* z-index: 1; */
 }
 
 .form-controll{
@@ -94,36 +98,57 @@ button:focus{
     background-color: #FFDD4A;
 }
 
-#messagebox{
-    background-color: #297045;
+.messageBox{
+    display: flex;
     margin-top: 10px;
-    padding: 10px;
-    color: rgb(253, 243, 228);
+    position: absolute;
+    top: 0;
     width: 25rem;
+    height: 3rem;
+    color:blanchedalmond;
+    justify-content: space-between;
+    border-radius: 3px;
     transform: translate(0,-150%);
-    z-index: -1;
-    display: none;
-    animation: messageAnim 1s linear forwards;
-    /* transition: transform .3s ease-in-out; */
+    /* z-index: 0; */
+    animation: messageAnim 1s ease-in-out forwards;
+}
+
+.mBoxPos{
+    background-color: #297045;
+}
+
+.mBoxNeg{
+    background-color: brown;
+}
+
+#messageTxt{
+    padding: 10px;
+}
+
+#cross{
+    cursor: pointer;
+    background-color: #297045;
+    border: 0;
+    text-align: center;
+    padding: 10px;
+    transition: .3s ;
+}
+
+#cross:hover{
+    background-color: brown;
+    border-radius:3px;
 }
 
 #pass{
     overflow: scroll;
 }
-
 .mAnim{
     animation: messageAnimOut 1s linear backwards;
 }
 
 @keyframes messageAnim{
     to{
-        transform: translate(0,-30%);
-    }
-}
-
-@keyframes messageAnimOut{
-    to{
-        transform: translate(0,-150%);
+        transform: translate(0, 180%);
     }
 }
 
