@@ -32,7 +32,6 @@ function getSymbol(){
 };
 
 function passloader(){
-    
 
     if(verifyCheck()){
         
@@ -50,7 +49,6 @@ function passloader(){
     else{
         messageBoxGenerate('Please select required fields',false);
     }
-
 
 };
 
@@ -134,4 +132,3 @@ function messageBoxGenerate(msg,type){
 function verifyCheck() { 
     return symbolEl.checked || numberEl.checked || lowerEl.checked || upperEl.checked;
  }
-
