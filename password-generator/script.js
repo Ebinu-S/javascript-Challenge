@@ -32,8 +32,10 @@ function getSymbol(){
 };
 
 function passloader(){
+    
 
     if(verifyCheck()){
+        
         let pass = '';
         const len = lenEL.value;
     

@@ -31,6 +31,12 @@ What I've done so far 🤓👇
   
   A Notes app to write notes.
 
+* Password Generator
+
+  ![passGen](https://user-images.githubusercontent.com/54814859/106092755-f75ac400-6154-11eb-82b6-de8bfa2cad33.png)
+
+  Generates Random password.
+
 ### Animations
 
 * Auto Text
@@ -45,8 +51,6 @@ What I've done so far 🤓👇
 
   Falling Random objects like rain.
   
-
-<!-- Reduce the Size of Images? -->
 
 
 
