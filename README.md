@@ -37,6 +37,12 @@ What I've done so far 🤓👇
 
   Generates Random password.
 
+* Random Recipe Generator
+
+  ![randomRecipe](https://user-images.githubusercontent.com/54814859/106297784-194d6700-6279-11eb-830d-78654135fab3.png)
+
+  Generate random recipe when loaded.  
+
 ### Animations
 
 * Auto Text
