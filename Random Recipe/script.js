@@ -29,10 +29,14 @@ function setRandomMeal(data){
         <p>Area : ${data.strArea}</P>
         <a href="${data.strYoutube} class='link' "><i class="fab fa-youtube ">Youtube</i></a>
     `;
-
+    // add heading for ingeredients and measurements
     for (i=1 ; i<=20;i++){
-        let ingr = 'strIngredient' + i;
-        ingEl.innerHTML = `<span>${data.ingr}</span> `;
+        let ingDiv = document.createElement('div');
+        let ingr = 'data.strIngredient' + i;
+        let msrt = 'data.strMeasure' + i;
+        ingDiv.innerHTML = `<span>${eval(ingr)}</span><span>${eval(msrt)}</span> `;
+        // span.classList.add('ingNdMeasure');  add style
+        ingEl.appendChild(ingDiv);
     }
 }
 

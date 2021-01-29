@@ -120,6 +120,27 @@ body {
     padding: 0.5rem 2rem;
 }
 
+.ing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding: 10px;
+
+}
+
+.ing div{
+    display: flex;
+    justify-content: space-between; // layout
+
+}
+
+.ingH{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
 a{
     color: red !important;
     padding: 1rem;
