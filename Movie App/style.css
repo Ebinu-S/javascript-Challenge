@@ -7,4 +7,185 @@
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    color: #F5F5F5;
+    height: 100vh;
 }
+
+header{
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #061222;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
+}
+
+header h2{
+    margin: 0;
+}
+
+#form{
+    position: relative;
+    text-align: center;
+}
+
+#form input{
+    background-color: #0D2E59;
+    padding: 0.6rem;
+    border: 0;
+    border-radius: 10px;
+    width: 20rem;
+    color: #f5576c;
+}
+
+#form input:focus{
+    outline: none;
+}
+
+#form input::placeholder{
+    color: #a13846;
+}
+
+
+
+#form i{
+    color: #f5576c;
+}
+
+#main{
+    display: flex;
+    margin: 2rem 0.5rem;   
+    background-color: #061222;
+    background-image: linear-gradient(90deg, #061222 30%, #590462 100%); 
+    /* padding: 2rem 1rem; */
+    border-radius: 10px;
+    flex-direction: row;
+    height: 80vh;
+
+}
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.card{
+    width: 200px;
+    height: 250px;
+    background-color: #f6ebff;
+    margin: 10px 10px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    cursor: pointer ;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.card img {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    object-fit: cover;
+    
+}
+
+.cardTitle{
+    background-color: #f6ebff;
+    position: absolute;
+    width: 100%;
+    /* z-index: 1; */
+    bottom: 0;
+    transform: translateY(101%);
+    transition: transform .3s ease-in-out ;
+}
+
+/* backup - rose f5576c */
+.card:focus{
+    color: #242424;
+    outline: none;
+}
+
+.card:focus .cardTitle{
+    background-image: linear-gradient(120deg, #590462 0%, #f5576c 100%); 
+    color: #ffffff;
+    transform: translateY(0);
+
+}
+
+.card:hover .cardTitle{
+    transform: translateY(0);
+}
+
+.card:hover .cardRating{
+    display: none;
+}
+
+.cardRating{
+    position: absolute;
+    right: 0;
+    background-color: #f3f3f39a;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0 10px 0 0;
+}
+
+#overview{
+    width: 50%;
+    padding: 0 1rem 1rem 0.5rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius:  0 10px 0 0;
+    /* background-color: #0612221a; */
+}
+
+#overview h2{
+    text-align: center;
+}
+
+#overview img{
+    height: 400px;
+}
+
+.headData{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headData h2{
+    margin: 0;
+}
+
+#overviewTxt{
+    overflow: scroll;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    transition: .5s;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); 
+
+}
+
+/* 
+accent color?   
+background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); 
+ */
