@@ -22,7 +22,6 @@ async function showMovies(link) {
  //displays the movie cards
 function displayMovieCards(movies) { 
     cardsEl.innerHTML ='';
-    let mIndex = 0;
 
     movies.forEach((movie) => {
 
@@ -47,7 +46,10 @@ function displayMovieCards(movies) {
         const cardBtn = movieCard.querySelector('.card');
 
         cardBtn.addEventListener('click', ()=>{
-            console.log(title);
+            
+            cardsEl.classList.add('WM');
+            overviewEl.classList.add('WM');
+
             overviewEl.innerHTML = `
                 <img src="${ backdrop_path == null? noPreviewBdSrc : IMGPATH + backdrop_path}" alt="${title}">
                 <div class="headData"><h2>${title}</h2> <p>release date : ${release_date}</p></div>

@@ -65,16 +65,19 @@ header h2{
     border-radius: 10px;
     flex-direction: row;
     height: 80vh;
-
 }
 
 #cards{
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
     justify-content: space-evenly;
     overflow-x: hidden;
     overflow-y: scroll;
+    transition: .3s;
+}
+
+.WM{
+    width: 50%;
 }
 
 #srchBtn{
@@ -161,13 +164,13 @@ header h2{
 }
 
 #overview{
-    width: 50%;
     padding: 0.5rem 1rem 1rem 0.5rem;
     overflow-x: hidden;
     overflow-y: scroll;
     border-radius:  0 10px 0 0;
-    /* background-color: #0612221a; */
+    transition: .3s;
 }
+
 
 #overview h2{
     text-align: center;

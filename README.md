@@ -43,6 +43,12 @@ What I've done so far 🤓👇
 
   Generate random recipe when loaded.  
 
+* Movies App 
+
+  ![image](https://user-images.githubusercontent.com/54814859/106373819-688fb680-63a3-11eb-8d1b-ac3508f3bcc3.png)
+
+  Display Movies with their rating and overview. You can also search for movies.
+
 ### Animations
 
 * Auto Text
