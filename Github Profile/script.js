@@ -5,11 +5,12 @@ const mainEl = document.getElementById('main');
 const formEl = document.getElementById('form');
 const searchEl = document.getElementById('search');
 const repoDiv = document.getElementById('repoDiv');
-const repoDivContainer = document.getElementById('repoDivContainer');
 
 getResponse('Ebinu-S'); //initialised with my repository
 
 async function getResponse(username) { 
+    repoDiv.innerHTML = '';
+    mainEl.innerHTML = '';
     const resp = await fetch(APIURL + username);
     const respData = await resp.json();
     if(respData.message == "Not Found"){
@@ -83,5 +84,5 @@ function renderProfile(profile) {
 
  function dosentExistAnymorePoorGuyHopeIsGoodInHeaven(){
     mainEl.innerHTML = `<div class = 'notExist'> The Person you are searching for does not exist <i class="fas fa-heart-broken"></i> </P>`;
-
+    repoDiv.innerHTML = '';
  }
