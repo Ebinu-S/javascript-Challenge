@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Engagement&display=swap');
 
 * {
     box-sizing: border-box;
@@ -23,6 +24,8 @@ header{
 
 header h2{
     margin: 0;
+    font-family: 'Engagement', 'sans-serif' ;
+    font-size: 2rem
 }
 
 #form{
@@ -122,7 +125,7 @@ header h2{
     background-image: linear-gradient(120deg, #590462 0%, #f5576c 100%); 
     color: #ffffff;
     transform: translateY(0);
-
+    
 }
 
 .card:hover .cardTitle{
@@ -143,7 +146,7 @@ header h2{
 
 #overview{
     width: 50%;
-    padding: 0 1rem 1rem 0.5rem;
+    padding: 0.5rem 1rem 1rem 0.5rem;
     overflow-x: hidden;
     overflow-y: scroll;
     border-radius:  0 10px 0 0;
@@ -171,9 +174,9 @@ header h2{
     overflow: scroll;
 }
 
+
 ::-webkit-scrollbar{
-    width: 5px;
-    transition: .5s;
+    width: 3px;
 }
 
 ::-webkit-scrollbar-track{
@@ -181,9 +184,10 @@ header h2{
 }
 
 ::-webkit-scrollbar-thumb{
-background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); 
-
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); 
 }
+
+
 
 /* 
 accent color?   
