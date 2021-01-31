@@ -49,6 +49,12 @@ What I've done so far 🤓👇
 
   Display Movies with their rating and overview. You can also search for movies.
 
+* GitHub finder
+
+  ![ghub](https://user-images.githubusercontent.com/54814859/106390532-d2917580-640e-11eb-987a-513a52415263.png)
+
+  Search and display github profiles.
+
 ### Animations
 
 * Auto Text
