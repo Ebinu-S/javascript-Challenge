@@ -5,8 +5,11 @@ const SEARCHAPI = 'https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5
 const cardsEl = document.getElementById('cards');
 const formEl = document.getElementById('form');
 const searchEl = document.getElementById('search');
+const overviewEl = document.getElementById('overview');
+const searchBtnEL = document.getElementById('srchBtn');
 
-const noPreviewSrc = 'img/noPreview.png';
+const noPreviewTnSrc = 'img/noPreview.png';
+const noPreviewBdSrc = 'img/npl.png';
 
 showMovies(APIURL);
 
@@ -34,32 +37,42 @@ function displayMovieCards(movies) {
                     <div class="cardTitle" />
                         <h3>${title}</h3>
                     </div>
-                    <img src="${ poster_path == null? noPreviewSrc : IMGPATH + poster_path }" alt="${title}" class="cardImg">
+                    <img src="${ poster_path == null? noPreviewTnSrc : IMGPATH + poster_path }" alt="${title}" class="cardImg">
                     
                 </button> 
                 `;
         
         cardsEl.appendChild(movieCard); 
+
+        const cardBtn = movieCard.querySelector('.card');
+
+        cardBtn.addEventListener('click', ()=>{
+            console.log(title);
+            overviewEl.innerHTML = `
+                <img src="${ backdrop_path == null? noPreviewBdSrc : IMGPATH + backdrop_path}" alt="${title}">
+                <div class="headData"><h2>${title}</h2> <p>release date : ${release_date}</p></div>
+                <div class="overviewTxt">${overview}
+                </div>
+            `
+        })
         
     });
  }
 
-formEl.addEventListener('submit', (e)=>{
-     e.preventDefault();
-
-     const searchMovie = searchEl.value;
-
-     if(searchMovie){
-         showMovies(SEARCHAPI + searchMovie);
-     }
+formEl.addEventListener('submit', (e)=>{     e.preventDefault();
+     callMovies();
  });
 
- //use index?
-//  const cardEL = document.querySelector('.card');
-//         cardEL.addEventListener('click', ()=> {
-//             alert('poop')
-//         })
+searchBtnEL.addEventListener('click', ()=>{
+    callMovies();
+})
 
+ function callMovies(){
+    const searchMovie = searchEl.value;
 
+    if(searchMovie){
+        showMovies(SEARCHAPI + searchMovie);
+    }
+ }
 
 
