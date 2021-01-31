@@ -7,4 +7,41 @@
 body {
     font-family: "Comfortaa", sans-serif;
     margin: 0;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    color: #E5FCFF;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#container{
+    background-color: #070600;
+    width: 50vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#displayBody{
+    background-color: #291527;
+    height: 10rem;
+    display: flex;  
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+#history{
+    width: 100%;  
+}
+
+#answerBox{
+    font-size: 2rem;
+    width: 100%;
+}
+.btn{
+    font-size: 5rem;
 }

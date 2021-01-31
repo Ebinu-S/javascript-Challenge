@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", cursive;
+    margin: 0;
+    background-color: #29539b;
+    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #030301  ;
+}
+
+#form {
+    margin: 2rem;
+}
+
+#search{
+    padding: 1rem;
+    background-color: #DDFFD9;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 0.1px rgba(0,0,0,0.2);
+}
+
+#search:focus{
+    outline: none;
+}
+#main{
+    background-color: #d5fefd;
+    background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%);
+    min-width: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    box-shadow: 20px 20px 4px 1.1px rgba(0,0,0,1);
+    border-radius: 30px;
+    padding: 2rem 0;
+}
+
+.avatar{
+    width: 180px;
+    border-radius: 50%;
+    margin: 2rem 0;
+    border: 3px solid #1e3b70;
+    /* box-shadow: 0 0 2px 1px rgba(0,0,0,0.4); */
+}
+.uInfo{
+    text-align: center;
+}
+
+.uInfo h3{
+    text-align: center ;
+    font-size: 2rem;
+    margin: 0;
+    background-color: #000000;
+    background-image: linear-gradient(to right, #000000 0%, #414141 74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.uInfo p{
+    margin: 1rem;
+    color:#7D6D61;
+    font-size: 1rem;
+}
+
+.countData{
+    color:#3d3935;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.countData span{
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.btns{
+    margin: 1rem 0;
+}
+.btns a{
+    text-decoration: none;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    padding: 0.6rem;
+    color: #030301;
+    margin: 0 1rem;
+    display: inline-block;
+    width: 8rem;
+    border-radius:20px;
+    text-align: center;
+}
+
+.btns a:hover{
+    background-image: linear-gradient(315deg, #5a92e0 0%, #71c8ce 74%);
+    /* box-shadow: 0 0 2px 0.5px rgba(0,0,0,0.5);
+     */
+    box-shadow: 3px 4px 1px 1.1px rgba(0,0,0,1);
+
+    color: #f2f2f2;
+}
