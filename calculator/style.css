@@ -1,47 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: "Comfortaa", sans-serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
-    background-color: #2d3436;
-    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
-    color: #E5FCFF;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-#container{
-    background-color: #070600;
-    width: 50vh;
-    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
+    min-height: 100vh;
 }
 
-#displayBody{
-    background-color: #291527;
-    height: 10rem;
-    display: flex;  
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
+#container{
+    background-color: red;
+    height: 80vh;
+    width: 256px;
+}
+
+#dispBox{
+    background-color: blue;
+    height: 25vh;
+    width: 100%;
+    position: relative;
 }
 
 #history{
-    width: 100%;  
+    background-color: brown;
+    position: absolute;
+    top: 1.5rem;
+    /* width: 100%; */
+    height: 3rem;
+    right: 1rem;
+    padding: 10px;
 }
 
-#answerBox{
+#answer{
+    position: absolute;
+    background-color: chartreuse;
     font-size: 2rem;
-    width: 100%;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 10px;
 }
-.btn{
-    font-size: 5rem;
+
+#themeSetting{
+    padding: 10px;
 }
+
+#themeSetting span{
+    font-size: 10px;
+}
+
+#theme{
+    position: absolute;
+}
+
+#ckLabel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+    background-color: darkblue;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+#ball{
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    border-radius: 10px;
+    background-color:dodgerblue;
+    transform: translateX(0px);
+    transition: transform .2s ease;
+}
+
+#theme:checked + #ckLabel #ball{
+    transform: translateX(22px);
+}
+
+.fa-sun{
+    color: darkgoldenrod;
+}
+
+.fa-moon{
+    color: #fff;
+    padding-left: 10px;
+}
+
+#btns{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#btns button{
+    font-size: 2rem;
+    margin: 3px;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+#backspace{
+    font-size: 1.5rem !important;
+}
+

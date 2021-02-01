@@ -3,45 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Calculator</h1>
     <div id="container">
-        <div  id="displayBody">
-            <div  id="history">
-                4*4 
-            </div>
-            <div id="answerBox">
-                16
-            </div>
+        
+        <div id="dispBox">
+            <span id="history">12+1</span>
+        <span id="answer">= 13</span>
         </div>
-        <div  id="buttons">
-            <div  id="lftBtns">
-                <button class="btn ylwBtn">C</button>
-                <button class="btn ylwBtn">(</button>
-                <button class="btn ylwBtn">)</button>
-                <button class="btn numBtn">7</button>
-                <button class="btn numBtn">8</button> <!-- br or flex adjust-->
-                <button class="btn numBtn">9</button>
-                <button class="btn numBtn">4</button>
-                <button class="btn numBtn">5</button>
-                <button class="btn numBtn">6</button>
-                <button class="btn numBtn">1</button>
-                <button class="btn numBtn">2</button>
-                <button class="btn numBtn">3</button> <!-- dot -->
-                <button class="btn numBtn">0</button>
-                <button class="btn numBtn">1</button> <!-- delete btn-->
-            </div>
-            <div  id="rgtBtns">
-                <button class="btn prplBtn">x</button>
-                <button class="btn prplBtn">x</button>
-                <button class="btn prplBtn">x</button>
-                <button class="btn prplBtn">x</button>
-                <button class="btn prplBtn">x</button> <!-- big-->
+        
+        <div id="themeSetting">
+            <input type="checkbox" id="theme">
+            <label for="theme" id="ckLabel">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <div id="ball"></div>
+            </label>        
+        </div>
 
-            </div>
+        <div id="btns">
+            <button id="clear" class="ylwBtn">C</button>
+            <button id="pOpen" class="ylwBtn">(</button>
+            <button id="pClose" class="ylwBtn">)</button>
+            <button id="multiply" class="prpBtn opMain"><i class="fas fa-times"></i></button> <!-- use br if css!working-->
+            <button id="n7">7</button>
+            <button id="n8">8</button>
+            <button id="n9">9</button>
+            <button id="divide" class="prpBtn opMain"><i class="fas fa-divide"></i></button>
+            <button id="n4">4</button>
+            <button id="n5">5</button>
+            <button id="n6">6</button>
+            <button id="subract" class="prpBtn opMain"><i class="fas fa-minus"></i></button>
+            <button id="n1">1</button>
+            <button id="n2">2</button>
+            <button id="n3">3</button>
+            <button id="add" class="prpBtn opMain"><i class="fas fa-plus"></i></button>
+            <button id="dot">.</button>
+            <button id="n0">0</button>
+            <button id="backspace"><i class="fas fa-backspace"></i></button>
+            <button id="equals" class="prpBtn opMain"><i class="fas fa-equals"></i></button>
         </div>
     </div>
     <script src="script.js"></script>
