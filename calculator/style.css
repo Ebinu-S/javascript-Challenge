@@ -12,42 +12,59 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #1e1f1f;
+
+}
+
+h1{
+    color: #fff;
 }
 
 #container{
-    background-color: red;
-    height: 80vh;
-    width: 256px;
+    height: 550px;
+    width: 300px;
+    justify-content: center;
+    align-items: center ;
+    background-color: #0d0a0b;
+    background-image: linear-gradient(315deg, #0d0a0b 0%, #2d0068 74%);
+    /* background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
+    color: #F5EFED;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+    padding: 0 22px;
 }
 
 #dispBox{
-    background-color: blue;
-    height: 25vh;
-    width: 100%;
+    background-color: rgba(31, 31, 31, 0)00;
+    height: 145px;
+    /* width: 90%; */
+    margin: 1rem 1rem 0 1rem;
     position: relative;
 }
 
 #history{
-    background-color: brown;
+    /* background-color: brown; */
     position: absolute;
-    top: 1.5rem;
+    top: 3.5rem;
     /* width: 100%; */
     height: 3rem;
     right: 1rem;
-    padding: 10px;
+    padding: 5px;
 }
 
 #answer{
     position: absolute;
-    background-color: chartreuse;
-    font-size: 2rem;
-    bottom: 1rem;
+    /* background-color: chartreuse; */
+    font-size: 3rem;
+    bottom: 0rem;
     right: 1rem;
-    padding: 10px;
 }
 
 #themeSetting{
     padding: 10px;
+    height: 50px;
+    
 }
 
 #themeSetting span{
@@ -65,20 +82,20 @@ body {
     justify-content: space-between;
     padding: 5px;
     cursor: pointer;
-    background-color: darkblue;
+    background-color: #242424;
     width: 60px;
     height: 30px;
     border-radius: 50px;
 }
 
 #ball{
-    height: 20px;
+    height: 25px;
     width: 30px;
     position: absolute;
-    border-radius: 10px;
-    background-color:dodgerblue;
+    border-radius: 15px;
+    background-color:#C5BAAF;
     transform: translateX(0px);
-    transition: transform .2s ease;
+    transition: transform .5s ease;
 }
 
 #theme:checked + #ckLabel #ball{
@@ -95,11 +112,12 @@ body {
 }
 
 #btns{
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    height: 320px;
 }
 
 #btns button{
@@ -108,9 +126,43 @@ body {
     padding: 5px;
     height: 50px;
     width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    color: seashell;
+    box-shadow: 0 0 2px 2px rgba(255, 255,255, 0.1);
+    border: 0;
+    border-radius: 45% ;
+    transition: .2s ease-in;
+}
+
+#btns button:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+#btns button:focus{
+    outline: 0;
 }
 
 #backspace{
     font-size: 1.5rem !important;
 }
 
+.ylwBtn{
+    background-color: #FFA0701a !important ;
+}
+
+.ylwBtn:hover{
+    background-color: #FFA070 !important ;
+
+}
+.prpBtn{
+    background-color: #483D891a !important;
+}
+
+.prpBtn:hover{
+    background-color: #483D89 !important;
+}
+
+#equals{
+    background-color: #64F58D !important; 
+}
