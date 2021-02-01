@@ -8,14 +8,51 @@ body {
     font-family: "Comfortaa", sans-serif;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    color: #f4f4f4;
 }
 
 canvas{
-    width: 800px;
-    height: 600px;
+    width: 1200px;
+    height: 620px;
     background-color: blanchedalmond;
+}
+
+#toolBar{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    height: 620px;
+    text-align: center
+}
+
+#toolBar > *{
+    background-color : #7cffcb;
+    background-image : linear-gradient(315deg, #63c59e 0%, #58b89d 74%);
+    border: 0;
+    padding: 0.7rem;
+    margin-bottom: 0.3rem;
+    color: #000;
+    border-radius: 10px;
+}
+
+#toolBar input{
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+}
+
+#toolBar button:hover{
+    background-image : linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+    cursor: pointer;
+}
+
+#toolBar> :last-child{
+    margin-bottom: auto;
+    bottom: 0   ;
 }
