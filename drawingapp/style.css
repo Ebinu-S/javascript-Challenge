@@ -20,7 +20,7 @@ body {
 canvas{
     width: 1200px;
     height: 620px;
-    background-color: blanchedalmond;
+    background-color: #fff;
 }
 
 #toolBar{
