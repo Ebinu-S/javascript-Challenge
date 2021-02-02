@@ -11,9 +11,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     transition: .3s ease;
     background-color: #a88beb;
+    overflow: hidden;
 }
 
 body.dark{
@@ -32,19 +33,25 @@ body.dark{
     padding: 5px 22px;
     background-color: #f8ceec;
     background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
-
 }
 
 #container.dark{
-    background-color: #202060;
-    background-image: linear-gradient(315deg, #602080 0%, #202060 74%);
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #000000  0%,#162c2c  90%);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
     color: #F5EFED;
-
 }
 
 h3{
     margin: 10px 0 0 0;
     padding-top: 5px;
+    font-size: 0.81rem;
+    position: absolute;
+    transform: translate(0,0);
+}
+
+.floatLol{
+    animation: headlol forwards .3s linear;
 }
 
 h3.dark{
@@ -75,6 +82,12 @@ h3.dark{
     font-size: 3rem;
     bottom: 0rem;
     right: 1rem;
+    overflow: scroll;
+    /* width: 256px; */
+}
+
+#answer::-webkit-scrollbar{
+    display: none;
 }
 
 #themeSetting{
@@ -112,7 +125,7 @@ h3.dark{
     border-radius: 15px;
     background-color:#C5BAAF;
     transform: translateX(22px);
-    transition: transform .5s ease;
+    transition: transform .5s cubic-bezier(0.21, 0.68, 0, 1.48);
 }
 
 #theme:checked + #ckLabel #ball{
@@ -197,4 +210,10 @@ h3.dark{
 
 #equals{
     background-color: #64F58D !important; 
+}
+
+@keyframes headlol{
+    to{
+        transform: translate(0,700px);
+    }
 }

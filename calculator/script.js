@@ -2,19 +2,21 @@ const containerEL = document.getElementById('container');
 const btnsEl = document.getElementById('btns');
 const h3el = document.querySelector('h3'); 
 const ckbox = document.getElementById('theme');
+const themeStng = document.getElementById('themeSetting');
 
 const btns = btnsEl.querySelectorAll('button');
 
 let history = '';
 let answer = '';
 let opFlag = false;
-let op = 'add';
+let op = '';
 let rhs ='';
 let lhs ='';
 let opView ='';
 let rhsD = '';
 let lhsD ='';
-let valueX= '';
+let valueAns= '';
+let decimalFlag = false;
 
 const answerEL = document.getElementById('answer');
 const historyEl = document.getElementById('history');
@@ -31,11 +33,16 @@ const n7 = document.getElementById('n7');
 const n8 = document.getElementById('n8');
 const n9 = document.getElementById('n9');
 
+const dot = document.getElementById('dot');
+const minus = document.getElementById('minus');
+const allF = document.getElementById('pOpen'); 
+
 const opMultiply = document.getElementById('multiply');
 const opDivide = document.getElementById('divide');
 const opSubract = document.getElementById('subract');
 const opAdd = document.getElementById('add');
 const opEquals = document.getElementById('equals');
+const clearEl = document.getElementById('clear');
 
 // setting values
 n0.addEventListener('click', ()=> {
@@ -148,6 +155,30 @@ n9.addEventListener('click', ()=> {
     }
 });
 
+dot.addEventListener('click', ()=> {
+    decimalFlag = true;
+    if(opFlag){
+        rhs += '.';
+        updateHistory(rhs,false);
+    }
+    else{
+        lhs += '.';
+        updateHistory(lhs,true);
+    }
+});
+
+minus.addEventListener('click', ()=>{
+    h3el.classList.add('floatLol');
+})
+
+allF.addEventListener('click', ()=> {
+    btns.forEach(btn =>{
+        btn.classList.add('floatLol');
+        h3el.classList.add('floatLol');
+        themeStng.classList.add('floatLol');
+    })
+})
+
 //set Operations
 opAdd.addEventListener('click', ()=> {
     op = 'add';
@@ -177,18 +208,40 @@ opMultiply.addEventListener('click', ()=> {
     opFlag = true;
 });
 
+clearEl.addEventListener('click', ()=>{
+    clearDisp(true);
+})
+
 opEquals.addEventListener('click', ()=> {
-    
-    if(op = 'add' )
-    answerEL.innerText = parseInt(lhs,10) + parseInt(rhs,10);
-    console.log(parseInt(lhs,10) + parseInt(rhs,10));
-    // clearDisp();
+
+    if(op == 'add' ){
+        valueAns = parseFloat(lhs,10) + parseFloat(rhs,10);
+    }
+    else if(op == 'sub'){
+        valueAns = parseFloat(lhs, 10) - parseFloat(rhs,10);
+    }
+    else if(op == 'mul'){
+        valueAns = parseFloat(lhs, 10) * parseFloat(rhs,10);
+    }
+    else if(op == 'div'){
+        valueAns = parseFloat(lhs, 10) / parseFloat(rhs,10);
+        decimalFlag = true;
+    }
+    console.log(valueAns);
+    // check nan if so add error message inside ans with red bg and transoform animation 
+    if(decimalFlag)
+    answerEL.innerText = valueAns.toFixed(2);
+    else
+    answerEL.innerText = valueAns;
+
+    clearDisp(false);
 });
 
 function updateHistory(value, isLhs){
 
     if(isLhs){
         lhsD = value;
+        rhsD = '';
     }
     else{
         rhsD = value;
@@ -196,10 +249,16 @@ function updateHistory(value, isLhs){
     historyEl.innerText = lhsD + opView + rhsD;
 }
 
-function clearDisp() {
+function clearDisp(allClear) {
+    if(allClear){
+        historyEl.innerText ='';
+        answerEL.innerText = '';
+    }
     lhs = '';
     rhs = '';
-    // answerEL.innerText = '';
+    opView = ''; 
+    opFlag = false;
+    decimalFlag = false
  };
 
 // function to toggle theme
