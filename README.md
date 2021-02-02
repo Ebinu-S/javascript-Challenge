@@ -12,6 +12,12 @@ What I've done so far 🤓👇
   ![bday1](https://user-images.githubusercontent.com/54814859/105850310-9671a580-6007-11eb-84e6-c1875826fecc.png)
   
   First Challenge. A Simple Countdown to my birthday.
+
+  * Simple Calculator
+
+  ![calc](https://user-images.githubusercontent.com/54814859/106566030-bcda9800-6555-11eb-85b5-9fdbd54fe19b.png)
+
+  A simple calculator.
   
 * Quiz
 
@@ -60,6 +66,7 @@ What I've done so far 🤓👇
   ![meow](https://user-images.githubusercontent.com/54814859/106427654-be408d80-648d-11eb-8549-29be96872e13.png)
 
   Draw!!
+
 
 ### Animations
 
