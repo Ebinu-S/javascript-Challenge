@@ -12,34 +12,50 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #1e1f1f;
-
+    transition: .3s ease;
+    background-color: #a88beb;
 }
 
-h1{
-    color: #fff;
+body.dark{
+    background-color: #202040;
 }
+
 
 #container{
-    height: 550px;
+    height: 560px;
     width: 300px;
     justify-content: center;
     align-items: center ;
-    background-color: #0d0a0b;
-    background-image: linear-gradient(315deg, #0d0a0b 0%, #2d0068 74%);
-    /* background-color: #2d3436;
-    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
-    color: #F5EFED;
+    transition: .3s ease;
     border-radius: 30px;
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
-    padding: 0 22px;
+    padding: 5px 22px;
+    background-color: #f8ceec;
+    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+
+}
+
+#container.dark{
+    background-color: #202060;
+    background-image: linear-gradient(315deg, #602080 0%, #202060 74%);
+    color: #F5EFED;
+
+}
+
+h3{
+    margin: 10px 0 0 0;
+    padding-top: 5px;
+}
+
+h3.dark{
+    color: rgb(177, 177, 177);
 }
 
 #dispBox{
     background-color: rgba(31, 31, 31, 0)00;
     height: 145px;
     /* width: 90%; */
-    margin: 1rem 1rem 0 1rem;
+    margin: 0rem 1rem 0 1rem;
     position: relative;
 }
 
@@ -73,6 +89,7 @@ h1{
 
 #theme{
     position: absolute;
+    opacity: 0;
 }
 
 #ckLabel{
@@ -94,12 +111,12 @@ h1{
     position: absolute;
     border-radius: 15px;
     background-color:#C5BAAF;
-    transform: translateX(0px);
+    transform: translateX(22px);
     transition: transform .5s ease;
 }
 
 #theme:checked + #ckLabel #ball{
-    transform: translateX(22px);
+    transform: translateX(0px);
 }
 
 .fa-sun{
@@ -118,6 +135,13 @@ h1{
     justify-content: space-evenly;
     flex-wrap: wrap;
     height: 320px;
+    
+}
+
+#btns button.dark{
+    color: seashell;
+    box-shadow: 0 0 1px 2px rgba(255, 255,255, 0.1);
+
 }
 
 #btns button{
@@ -128,15 +152,23 @@ h1{
     width: 50px;
     background-color: transparent;
     cursor: pointer;
-    color: seashell;
-    box-shadow: 0 0 2px 2px rgba(255, 255,255, 0.1);
     border: 0;
     border-radius: 45% ;
     transition: .2s ease-in;
+    box-shadow: 0 0 2px 2px rgba(31, 29, 29, 0.1);
+
 }
 
-#btns button:hover{
+#btns button.dark:hover{
     background-color: rgba(255,255,255,0.1);
+
+}
+
+
+#btns button:hover{
+    background-color: rgba(22, 22, 22, 0.859);
+    color: seashell;
+    
 }
 
 #btns button:focus{
@@ -152,7 +184,7 @@ h1{
 }
 
 .ylwBtn:hover{
-    background-color: #FFA070 !important ;
+    background-color: #ffa07075 !important ;
 
 }
 .prpBtn{
