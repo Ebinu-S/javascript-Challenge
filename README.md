@@ -19,7 +19,7 @@ What I've done so far 🤓👇
 
   A simple calculator.
   
-  [test](https://ebinu-s.github.io/index.html)
+  [test](https://ebinu-s.github.io/javascript-Challenge/index.html)
 * Quiz
 
   ![q1](https://user-images.githubusercontent.com/54814859/105850316-97a2d280-6007-11eb-854f-37ade1d69856.png)
