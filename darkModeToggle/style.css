@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    min-height: 100vh;
+    max-width: 100vw;
+    color: black;
+    /* transition: .3s; */
+}
+
+body.dark{
+    background-color: #1f1a52;
+    background-image: linear-gradient(315deg, #1f1a52 0%, #07070f 74%);
+    color: #FFEEF2;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.2);
+}
+
+#header.dark{
+    background-color: #1f1a52;
+    background-image: linear-gradient(315deg, #0f0f1f 0%,  #1f1a52  74%);
+}
+
+#header h2{
+    margin: 0;
+    padding: 10px;
+    font-weight: 900;
+    font-family: 'Abril Fatface', sans-serif;
+    color: #FFEEF2;
+}
+
+#navLinks{
+    overflow: hidden;
+}
+
+#header a{
+    text-decoration: none;
+    background-color: rgb(235, 199, 99,0.7);
+    padding: 7px;
+    color: #291e1e;
+    border-radius: 4px;
+    font-size :14px;
+    transition: .3s;
+}
+
+#header.dark a{
+    background-color:#e16428;
+    color: rgb(255, 239, 239);
+}
+
+#header a:hover{
+    background-color: rgb(235, 199, 99);
+}
+
+#header button{
+    border: 0;
+    background-color: rgb(235, 199, 99,0.7);
+    padding:8px;
+    color: #291e1e;
+    border-radius: 4px;
+    transition: .3s;
+    font-size :16px;
+    cursor: pointer;
+}
+
+#header button:hover{
+    background-color: rgb(235, 199, 99);
+}
+
+
+#container{
+    display: flex;
+    flex-direction: row;
+    padding: 5vh 5vw;
+    justify-content: space-evenly;
+}
+
+#mainTxt{
+    width: 50vw;
+}
+
+#mainTxt p:nth-child(1){
+    font-size: 3rem;
+    padding: 10px 0;
+    margin: 0;
+}
+
+
+#mainTxt p:nth-child(1) span{
+    background-color: rgb(235, 199, 99,0.8);
+}
+
+#mainTxt.dark p:nth-child(1) span{
+    background-color:#e16428 !important;
+}
+
+#image{
+    background-image: url("bg1.jpg");
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+}
+
+#image.dark{
+    background-image: url("bg2.jpg");
+
+}
+
+#mainTxt p:nth-child(2){
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+#mainTxt p:nth-child(3){
+    font-size: 1rem;
+}
+
+#mainTxt button{
+    border: 0;
+    background-color: #14342B;
+    padding:8px;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: .3s;
+    font-size :16px;
+    cursor: pointer;
+}
+
+#mainTxt button:hover{
+    background-color: rgb(23, 133, 87);
+}
+
+
+#bottonCards{
+    display: flex;
+    height: 200px;
+    align-items: center;
+    margin: 0.5rem 2.5rem;
+}
+
+.bottmC{
+    display: flex;
+    background-color: rgb(56, 56, 56);
+    margin: 0 10px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #c5c5c5;  
+    align-items: center;
+}
+
+.bottmC.dark{
+    background-color:#c5c5c5;
+    color:  rgb(56, 56, 56);  
+}
+
+.bottmC i {
+    font-size: 4rem;
+    text-align: center;
+    padding: 10px;
+}
+
+#themeToggle{
+    margin-top: 2rem;
+    position: relative;
+    width: 80px;
+    height: 35px;
+    display: flex;
+    background-color: rgb(56, 56, 56);
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+}
+
+#themeToggle input{
+    position: absolute;
+    opacity: 0;
+}
+
+#themeToggle label{
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+#ball{
+    width: 25px;
+    height: 25px;
+    background-color: blanchedalmond;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(0px);
+    transition: transform 0.5s cubic-bezier(0.78,-0.39, 0, 1.38);
+}
+
+#ckbx:checked + label #ball{
+    transform: translateX(35px);
+}
+
+.fa-sun{
+    color: chocolate;
+}
+
+.fa-moon{
+    color: cornsilk;
+}
+/* add color input animation and all */
+
+body::-webkit-scrollbar{
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #000;
+}

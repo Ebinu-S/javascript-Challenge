@@ -16,7 +16,7 @@ What I've done so far 🤓👇
   
   First Challenge. A Simple Countdown to my birthday.
 
-  * Simple Calculator
+* Simple Calculator
 
   ![calc](https://user-images.githubusercontent.com/54814859/106566030-bcda9800-6555-11eb-85b5-9fdbd54fe19b.png)
 
@@ -70,6 +70,12 @@ What I've done so far 🤓👇
 
   Draw!!
 
+* Toggle Theme
+
+  ![bg2](https://user-images.githubusercontent.com/54814859/106915407-f7962900-672b-11eb-8f5d-a035001ed362.jpg)
+  ![bg1](https://user-images.githubusercontent.com/54814859/106915394-f533cf00-672b-11eb-8732-6acc2b50852d.jpg)
+
+  Toggle between Darkmode and light mode
 
 ### Animations
 
