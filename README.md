@@ -3,7 +3,9 @@
 👋 hey there. As part of learning JavaScript. I've challenged myself to create small applications using vanilla js.
 
 What I've done so far 🤓👇
-  [Demo](https://ebinu-s.github.io/javascript-Challenge/index.html)
+
+
+👀 [Demo](https://ebinu-s.github.io/javascript-Challenge/index.html)
 
 ---
 ### Application's
