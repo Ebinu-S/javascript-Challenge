@@ -36,6 +36,7 @@ const n9 = document.getElementById('n9');
 const dot = document.getElementById('dot');
 const minus = document.getElementById('minus');
 const allF = document.getElementById('pOpen'); 
+const backspace = document.getElementById('backspace'); 
 
 const opMultiply = document.getElementById('multiply');
 const opDivide = document.getElementById('divide');
@@ -210,6 +211,17 @@ opMultiply.addEventListener('click', ()=> {
 
 clearEl.addEventListener('click', ()=>{
     clearDisp(true);
+});
+
+backspace.addEventListener('click',()=>{
+    if(opFlag){
+        rhs = rhs.slice(0 ,-1);
+        updateHistory(rhs,false);
+    }
+    else{
+        lhs = lhs.slice(0,-1);
+        updateHistory(lhs,true);
+    }
 })
 
 opEquals.addEventListener('click', ()=> {
@@ -229,14 +241,19 @@ opEquals.addEventListener('click', ()=> {
     }
     console.log(valueAns);
     // check nan if so add error message inside ans with red bg and transoform animation 
-    if(decimalFlag)
-    answerEL.innerText = valueAns.toFixed(2);
-    else
-    answerEL.innerText = valueAns;
+    if(valueAns){
+        if(decimalFlag)
+        answerEL.innerText = valueAns.toFixed(2);
+        else
+        answerEL.innerText = valueAns;
+    }
+    else{
+        // answerEL.innerHTML = 'pha';
+    }
 
     clearDisp(false);
 });
-
+    
 function updateHistory(value, isLhs){
 
     if(isLhs){
@@ -249,7 +266,7 @@ function updateHistory(value, isLhs){
     historyEl.innerText = lhsD + opView + rhsD;
 }
 
-function clearDisp(allClear) {
+function clearDisp(allClear) { 
     if(allClear){
         historyEl.innerText ='';
         answerEL.innerText = '';

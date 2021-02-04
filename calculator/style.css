@@ -18,7 +18,7 @@ body {
 }
 
 body.dark{
-    background-color: #202040;
+    background-color: #080816;
 }
 
 
@@ -37,7 +37,7 @@ body.dark{
 
 #container.dark{
     background-color: #0cbaba;
-    background-image: linear-gradient(315deg, #000000  0%,#162c2c  90%);
+    background-image: linear-gradient(300deg, #181818  0%,#0d022c  90%);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
     color: #F5EFED;
 }
