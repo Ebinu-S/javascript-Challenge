@@ -72,6 +72,7 @@ body::-webkit-scrollbar{
 #datas{
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
