@@ -112,6 +112,11 @@ body::-webkit-scrollbar{
     padding: 1rem;
 }
 
+#searchAndHistory a{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
 #line{
     align-self: center;
     width: 90%;
