@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../src/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="weatherMain">
+        <h5> WeatherPP</h5>
+        <div id="currentWeather">
+            <h1>08°C</h1>
+            <span id="loc">
+                <h2>London</h2>
+                <p>6:15 - Sunday, 06 oct '19</p>
+            </span>
+            <i class="fas fa-cloud-showers-heavy"></i>
+        </div>
+    </div>
+    <div id="datas">
+        <div id="wDetails">
+            <h3>Weather Details</h3>
+            <span>
+                <p>Cloudy</p>
+                <p>86%</p>
+            </span>
+            <span>
+                <p>wind</p>
+                <p>8 km/h</p>
+            </span>
+            <span>
+                <p>Humidity</p>
+                <p>66%</p>
+            </span>
+            <span>
+                <p>Rain</p>
+                <p>8mm</p>
+            </span>
+        </div>
+        <div id="searchAndHistory">
+            <form id="form">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search" placeholder="Search">
+            </form>
+            <ul>
+                <li>London</li>
+                <li>Berlin</li>
+                <li>Toronto</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

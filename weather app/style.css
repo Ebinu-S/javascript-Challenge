@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    color: #fff;
+}
+
+body.rain{
+    /* filter: brightness(50%); */
+    background-image: url(rain.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#weatherMain{
+    width: 70vw;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#datas{
+    width: 30vw;
+}
+
+#currentWeather{
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+#currentWeather h1{
+    margin: 0 1rem 0 0;
+    font-size: 4.5rem;
+}
+
+#currentWeather i{
+    font-size: 2.5rem;
+    opacity: .8;
+}
+
+#loc{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+#loc h2{
+    margin: 0;
+    font-size: 2.1rem;
+}
+
+#loc p{
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+#datas{
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+    backdrop-filter: blur(15px);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#wDetails span{
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    justify-content: space-between;
+}
+
+#wDetails span p:nth-child(1){
+    color: #c1c1c1;
+}
+
+#search{
+    background: none;
+    font-size: 1.3rem;
+    border: 0;
+    color: #fff;
+    border-bottom: 1px rgb(185, 185, 185) solid;
+    margin: 10px;
+}
+#search:focus{
+    outline: none;
+}
+#searchAndHistory{
+    font-size: 0.8rem;
+}
+#searchAndHistory ul{
+    list-style-type: none;
+}
+
+#searchAndHistory ul li{
+    padding: 1rem;
+}
+
+#line{
+    align-self: center;
+    width: 90%;
+    height: 1px;
+    background-color: blanchedalmond;
+    border-radius: 1px;
+    opacity: .3;
+}
