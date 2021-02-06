@@ -12,7 +12,7 @@
     <div id="weatherMain">
         <h5> WeatherPP</h5>
         <div id="currentWeather">
-            <h1>08°C</h1>
+            <h1 id="cTemp"></h1>
             <span id="loc">
                 <h2>London</h2>
                 <p>6:15 - Sunday, 06 oct '19</p>
@@ -22,22 +22,23 @@
     </div>
     <div id="datas">
         <div id="wDetails">
+            <!-- TODO More detail -->
             <h3>Weather Details</h3>
-            <span>
-                <p>Cloudy</p>
-                <p>86%</p>
+            <span id="weatherD">
+                <p>Weather : </p>
+                <p></p>
             </span>
-            <span>
-                <p>wind</p>
-                <p>8 km/h</p>
+            <span id="windD">
+                <p>wind : </p>
+                <p></p>
             </span>
-            <span>
-                <p>Humidity</p>
-                <p>66%</p>
+            <span id="HumidityD">
+                <p>Humidity : </p>
+                <p></p>
             </span>
-            <span>
-                <p>Rain</p>
-                <p>8mm</p>
+            <span id="pressureD">
+                <p>Pressure : </p>
+                <p></p>
             </span>
         </div>
         <div id="searchAndHistory">
@@ -52,7 +53,7 @@
             </ul>
         </div>
     </div>
-    <script src="config.js"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
