@@ -4,6 +4,8 @@ const APPID = '&appid='
 
 const MYKEY = config.key;
 
+const historyFLs = JSON.parse(localStorage.getItem('historyLsValues'));
+
 const currentTempEL = document.getElementById('cTemp');
 const locNameEl = document.getElementById('loc'); 
 const weatherEl = document.getElementById('weatherD');
@@ -24,6 +26,10 @@ const a2El = document.getElementById('a2');
 const a3El = document.getElementById('a3');
 
 let hisoryTemp = '';
+
+if(historyFLs){
+    setHistory(historyFLs[0]); 
+}
 
 async function getPromise(loc){
 
@@ -66,7 +72,9 @@ function renderResult(data){
     sunsetEl.children[1].innerText = (sunsetTime.getHours() % 12) + ':' + sunsetTime.getMinutes() + ' PM';
 };
 
-getPromise('kottayam');
+//initialises data
+// pass the last searched value
+getPromise(historyFLs[0].data1);
 
 formEl.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -74,7 +82,9 @@ formEl.addEventListener('submit',(e)=>{
 });
 
 searchEl.addEventListener('blur', ()=>{
-    getPromise(searchEl.value);
+    if(searchEl.value){
+        getPromise(searchEl.value);
+    }
 });
 
 a1El.addEventListener('click', ()=> {
@@ -97,16 +107,32 @@ function manageHistory(search){
     a3El.dataset.value = a2El.dataset.value;
     a3El.innerText = a3El.dataset.value
     a2El.dataset.value = hisoryTemp;
-    a2El.innerText = a2El.dataset.value
+    a2El.innerText = a2El.dataset.value;
+    updateLs();
 };
 
 function KelvinToCelcius(temp){
     return temp - 273.15;
 };
 
+//initially set history to last value on load
+function setHistory(historyFs){
+    a1El.dataset.value  = historyFs.data1;
+    a1El.innerText = historyFs.data1;
+    a3El.dataset.value = historyFs.data3;
+    a3El.innerText = historyFs.data3;
+    a2El.dataset.value = historyFs.data2;
+    a2El.innerText = historyFs.data2;
+}
+
 function updateLs(){
-    const history = [];
-    
+    const historyLs = [];
+    historyLs.push({
+        data1: a1El.dataset.value,
+        data2: a2El.dataset.value,
+        data3: a3El.dataset.value
+    });
+    localStorage.setItem('historyLsValues', JSON.stringify(historyLs));
 };
 
 /*
