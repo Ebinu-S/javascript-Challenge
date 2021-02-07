@@ -10,14 +10,65 @@ body {
     height: 100vh;
     display: flex;
     color: #fff;
+    transition: .3s;
+    background-position: center;
+    background-size: cover;
+    /* todo set a default bg */
 }
 
 body.rain{
-    /* filter: brightness(50%); */
-    background-image: url(rain.jpg);
-    background-position: center;
-    background-size: cover;
+    background-image: url(img/rain.jpg);
 }
+
+body.mist{
+    background-image: url(img/mist.jpg);
+}
+
+body.smoke{
+    background-image: url(img/smoke.jpg);
+}
+
+body.clouds{
+    background-image: url(img/clouds.jpg);
+}
+
+body.haze{
+    background-image: url(img/haze.jpg);
+}
+body.Thunderstorm{
+    background-image: url(img/Thunderstorm.jpg);
+}
+body.snow{
+    background-image: url(img/snow.jpg);
+}
+body.drizzle{
+    background-image: url(img/drizzle.jpg);
+}
+body.clear{
+    background-image: url(img/clear.jpg);
+}
+body.Dust{
+    background-image: url(img/dust.jpg);
+}
+body.Fog{
+    background-image: url(img/fog.jpg);
+}
+body.Sand{
+    background-image: url(img/sand.jpg);
+}
+body.Ash{
+    background-image: url(img/ash.jpg);
+}
+body.Wind{
+    background-image: url(img/wind.jpg);
+}
+body.Tornado{
+    background-image: url(img/tornado.jpg);
+}
+body.default{
+    background-image: url(img/default.jpg);
+}
+
 
 body::-webkit-scrollbar{
     display: none;
@@ -29,10 +80,13 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgba(0,0,0,0.3);
 }
 
 #datas{
     width: 30vw;
+    background-color: rgba(0,0,0,0.3);
+
 }
 
 #currentWeather{
@@ -110,7 +164,7 @@ body::-webkit-scrollbar{
 }
 
 #wDetails span p:nth-child(1){
-    color: #c1c1c1;
+    color: #dfdfdf;
 }
 
 #search{
@@ -126,6 +180,8 @@ body::-webkit-scrollbar{
 }
 #searchAndHistory{
     font-size: 0.8rem;
+    height: 10rem;
+    margin-top: 1rem;
 }
 #searchAndHistory ul{
     list-style-type: none;

@@ -51,7 +51,6 @@ async function getPromise(loc){
 
 function renderResult(data){
 
-    document.body.classList.add('rain');
     
     const sunriseTime = new Date(data.sys.sunrise * 1000);
     const sunsetTime = new Date(data.sys.sunset * 1000);
@@ -61,6 +60,73 @@ function renderResult(data){
     //  todo : get current time
     //  todo : change class of the i acording to the weather 
     weatherEl.children[1].innerText = data.weather[0].main;
+
+    if(data.weather[0].main === 'Mist'){
+       rmClass();
+       document.body.classList.add('mist');
+    }
+    else if(data.weather[0].main === 'Smoke'){
+        rmClass();
+        document.body.classList.add('smoke');
+     }
+    else if(data.weather[0].main === 'Clouds'){
+        rmClass()
+        document.body.classList.add('clouds');
+    }  
+    else if(data.weather[0].main === 'Rain'){
+        rmClass();
+        document.body.classList.add('rain');
+    }
+    else if(data.weather[0].main === 'Haze'){
+        rmClass();
+        document.body.classList.add('haze');
+    }
+    else if(data.weather[0].main === 'Thunderstorm'){
+        rmClass();
+        document.body.classList.add('Thunderstorm');
+    }
+    else if(data.weather[0].main === 'Snow'){
+        rmClass();
+        document.body.classList.add('snow');
+    }
+    else if(data.weather[0].main === 'Drizzle'){
+        rmClass();
+        document.body.classList.add('drizzle');
+    }
+    else if(data.weather[0].main === 'Clear'){
+        rmClass();
+        document.body.classList.add('clear');
+    }
+    else if(data.weather[0].main === 'Dust'){
+        rmClass();
+        document.body.classList.add('Dust');
+    }
+    else if(data.weather[0].main === 'Fog'){
+        rmClass();
+        document.body.classList.add('Fog');
+    }
+    else if(data.weather[0].main === 'Sand'){
+        rmClass();
+        document.body.classList.add('Sand');
+    }
+    else if(data.weather[0].main === 'Ash'){
+        rmClass();
+        document.body.classList.add('Ash');
+    }
+    else if(data.weather[0].main === 'Squall'){
+        rmClass();
+        document.body.classList.add('Wind');
+    }
+    else if(data.weather[0].main === 'Tornado'){
+        rmClass();
+        document.body.classList.add('Tornado');
+    }
+    else{
+        rmClass();
+        document.body.classList.add('default');
+    }
+
+
     windEl.children[1].innerText = data.wind.speed + ' km/h';
     humidityEl.children[1].innerText = data.main.humidity + ' %';
     pressureEl.children[1].innerText = data.main.pressure + ' hPa';
@@ -72,8 +138,11 @@ function renderResult(data){
     sunsetEl.children[1].innerText = (sunsetTime.getHours() % 12) + ':' + sunsetTime.getMinutes() + ' PM';
 };
 
+function rmClass() { 
+    document.body.className = '';
+ }
+
 //initialises data
-// pass the last searched value
 getPromise(historyFLs[0].data1);
 
 formEl.addEventListener('submit',(e)=>{
@@ -97,6 +166,21 @@ a2El.addEventListener('click', ()=> {
 
 a3El.addEventListener('click', ()=> {
     getPromise(a3El.dataset.value);
+});
+
+a1El.addEventListener('contextmenu', ()=> {
+    a1El.innerText = '';
+    a1El.dataset.value = '';
+});
+
+a2El.addEventListener('contextmenu', ()=> {
+    a2El.dataset.value = '';
+    a2El.innerText = '';
+});
+
+a3El.addEventListener('contextmenu', ()=> {
+    a3El.dataset.value = '';
+    a3El.innerText = '';
 });
 
 //manages search history
@@ -138,12 +222,12 @@ function updateLs(){
 /*
 
     TODO 
-*   Change the background according to the weather
-?   store and retreive search history in local Storage
-?   add option to delete history
+*   add more weather background
+*   change icon according to the weather
+*   fix background not changing when called thorugh history
 *   display error when data isnt present
+*   display description for the weather
 ?   Add the clock?
-?   add suggested
 ?   option to get location ?
 * 
 */ 
