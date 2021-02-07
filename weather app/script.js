@@ -1,6 +1,6 @@
 const APIURL = 'http://api.openweathermap.org/data/2.5/';
 const GETLOC = 'weather?q=';
-const APPID = '&appid='
+const APPID = '&appid=';
 
 const MYKEY = config.key;
 
@@ -24,6 +24,7 @@ const searchEl = document.getElementById('search');
 const a1El = document.getElementById('a1');
 const a2El = document.getElementById('a2');
 const a3El = document.getElementById('a3');
+const wthImg = document.getElementById('imgWeather');
 
 let hisoryTemp = '';
 
@@ -39,11 +40,17 @@ async function getPromise(loc){
         if(loc != a1El.dataset.value && loc != a2El.dataset.value){
             manageHistory(loc);
         }
+        console.log(data);
         renderResult(data);
     }
     else{
-        alert('invalid Input');
-        // todo style the error message
+        const erEl = document.createElement('span');
+        erEl.classList.add('errorMsg');
+        erEl.innerText = `Invalid Entry.`;
+        document.body.appendChild(erEl);
+        setTimeout(() => {
+            erEl.remove();
+        }, 4000);
     }
 
 };
@@ -57,8 +64,6 @@ function renderResult(data){
 
     currentTempEL.innerText = KelvinToCelcius(data.main.temp).toFixed(1) + ' °C';
     locNameEl.children[0].innerText = data.name;
-    //  todo : get current time
-    //  todo : change class of the i acording to the weather 
     weatherEl.children[1].innerText = data.weather[0].main;
 
     if(data.weather[0].main === 'Mist'){
@@ -126,7 +131,7 @@ function renderResult(data){
         document.body.classList.add('default');
     }
 
-
+    wthImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     windEl.children[1].innerText = data.wind.speed + ' km/h';
     humidityEl.children[1].innerText = data.main.humidity + ' %';
     pressureEl.children[1].innerText = data.main.pressure + ' hPa';
@@ -222,12 +227,9 @@ function updateLs(){
 /*
 
     TODO 
-*   change icon according to the weather
 *   display error when data isnt present
 *   display description for the weather
 *   display country flag?
-?   Add the clock?
-?   option to get location ?
 * 
 */ 
 
