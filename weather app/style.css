@@ -45,6 +45,7 @@ body::-webkit-scrollbar{
 #currentWeather h1{
     margin: 0 1rem 0 0;
     font-size: 4.5rem;
+    transition: .3s;
 }
 
 #currentWeather i{
