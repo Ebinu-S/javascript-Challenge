@@ -72,8 +72,9 @@ What I've done so far 🤓👇
 
 * Toggle Theme
 
-  ![bg2](https://user-images.githubusercontent.com/54814859/106915407-f7962900-672b-11eb-8f5d-a035001ed362.jpg)
-  ![bg1](https://user-images.githubusercontent.com/54814859/106915394-f533cf00-672b-11eb-8732-6acc2b50852d.jpg)
+  ![dm1](https://user-images.githubusercontent.com/54814859/107138455-88425400-693a-11eb-98c8-3d1561048db4.png)
+  ![dm2](https://user-images.githubusercontent.com/54814859/107138458-8bd5db00-693a-11eb-848e-f4fd576005a1.png)
+
 
   Toggle between Darkmode and light mode
 

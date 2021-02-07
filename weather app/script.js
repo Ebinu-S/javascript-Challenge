@@ -222,11 +222,10 @@ function updateLs(){
 /*
 
     TODO 
-*   add more weather background
 *   change icon according to the weather
-*   fix background not changing when called thorugh history
 *   display error when data isnt present
 *   display description for the weather
+*   display country flag?
 ?   Add the clock?
 ?   option to get location ?
 * 
