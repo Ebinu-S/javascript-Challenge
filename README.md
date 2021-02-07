@@ -72,11 +72,18 @@ What I've done so far 🤓👇
 
 * Toggle Theme
 
+  light Theme
   ![dm1](https://user-images.githubusercontent.com/54814859/107138455-88425400-693a-11eb-98c8-3d1561048db4.png)
+
+  Dark Theme
   ![dm2](https://user-images.githubusercontent.com/54814859/107138458-8bd5db00-693a-11eb-848e-f4fd576005a1.png)
 
 
   Toggle between Darkmode and light mode
+
+* Weather App
+
+  ![weather](https://user-images.githubusercontent.com/54814859/107153131-e4849280-6991-11eb-9d15-709e681e0590.png)
 
 ### Animations
 
