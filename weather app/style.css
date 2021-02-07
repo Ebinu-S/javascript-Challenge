@@ -79,6 +79,27 @@ body::-webkit-scrollbar{
     justify-content: space-around;
 }
 
+/* todo do something about backdrop filter on firefox */
+/* if supports backdrop filter*/
+/* @supports (background-color: rgba(0,0,0,0.1)){
+    #datas{
+        background-color: rgba(0,0,0,0.6);
+    }
+} */
+
+#wDetails{
+    overflow-y: scroll;
+}
+
+#wDetails::-webkit-scrollbar{
+    width: 2px;
+}
+
+#wDetails::-webkit-scrollbar-thumb{
+    background-color: rosybrown;
+    border-radius: 20px;
+}
+
 #wDetails span{
     display: flex;
     flex-direction: row;
@@ -107,10 +128,11 @@ body::-webkit-scrollbar{
 }
 #searchAndHistory ul{
     list-style-type: none;
+    margin: 0;
 }
 
 #searchAndHistory ul li{
-    padding: 1rem;
+    padding: 0.3rem 1rem;
 }
 
 #searchAndHistory a{
