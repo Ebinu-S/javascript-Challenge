@@ -105,3 +105,8 @@ body {
 #btn3.btnGreen:hover{
     background-color: springgreen;
 }
+
+#tArea{
+    outline: none;
+    margin: 2rem 0 1rem 0;
+}

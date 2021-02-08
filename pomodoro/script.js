@@ -20,8 +20,6 @@ function initialiseDisplay(){
 function pomodoroMain(){
 
     refreshTime();
-
-    console.log(btnToggle);
     updateProgressBar();
     if(timeLimit != -1){
         timeLimit--;
@@ -48,7 +46,7 @@ function updateProgressBar(){
 
 btn1.addEventListener('click', ()=>{
     if (btnToggle) {
-        //do something
+        //reset and restart the timer
     }
     else{
         if (startTime > 10) {
@@ -65,7 +63,7 @@ btn1.addEventListener('click', ()=>{
 
 btn2.addEventListener('click', ()=>{
     if(btnToggle){
-        //stop
+        // stops the countdown
     }
     else{
         if(startTime <100){
@@ -81,34 +79,15 @@ btn3.addEventListener('click', ()=>{
     if(btnToggle){
         btnToggle = false;
         btn3.innerHTML = `<i class="fas fa-play"></i>`; 
-        console.log('before : start time : ' + startTime, 'time limit ' + timeLimit);
-        startTime = timeLimit / 60;
-        timeLimit = startTime;
-        console.log('after : start time : ' + startTime, 'time limit ' + timeLimit);
+        btn2.innerHTML = `<i class="fas fa-plus"></i>`;
+        btn1.innerHTML =  `<i class="fas fa-minus"></i>`;
         clearInterval(timer);    
     }
     else{
         btnToggle = true;
         btn3.innerHTML = `<i class="fas fa-pause"></i>`;
+        btn2.innerHTML = `<i class="fas fa-stop"></i>`;
+        btn1.innerHTML = `<i class="fas fa-redo"></i>`
         timer = setInterval(pomodoroMain, 1000);    
     }
 });
-
-
-
-/*
-
-TODO    TODO    TODO    TODO    TODO    TODO    TODO    TODO    TODO    TODO    TODO    TODO    
-!   increasing speed when clicked more than once might solve using the toggle 
-*   stop at 100%
-*   toggle button
-*   add note
-*   display note as table
-?   find a way to index those notes
-*   log every details XD
-*/
-
-
-/*
-pause save paused time to set time.
-*/
