@@ -85,7 +85,7 @@ body {
     color: #f6ecf0;
     cursor: pointer;
     border-radius: 50%;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin: 3px;
 }
 
@@ -109,4 +109,14 @@ body {
 #tArea{
     outline: none;
     margin: 2rem 0 1rem 0;
+}
+
+.msg{
+    position: absolute;
+    left: 26%;
+    font-size: 50px;
+    top: 40%;
+    background-color: blanchedalmond;
+    padding: 1rem;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
 }
