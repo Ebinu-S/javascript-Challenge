@@ -59,7 +59,7 @@ function timerEnd(){
     msgEL.classList.add('msg');
     msgEL.innerText = `You have completed one cylce!`
     mainEl.prepend(msgEL);
-    // setTimeout(() => {msgEL.remove()}, 3000);
+    setTimeout(() => {msgEL.remove()}, 3000);
     timeLimit = startTime * 60;
     timerFinished = true;
     refreshTime();
