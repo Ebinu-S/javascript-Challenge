@@ -16,6 +16,14 @@ body {
 
 }
 
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 #main h3{
     font-weight: 700;
     font-size: 2rem;
@@ -113,10 +121,18 @@ body {
 
 .msg{
     position: absolute;
-    left: 26%;
+    /* left: 26%; */
     font-size: 50px;
-    top: 40%;
+    top: 37%;
     background-color: blanchedalmond;
     padding: 1rem;
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+
+@media(max-width:800px){
+    .msg{
+        top: 47%;   
+        font-size: 25px;
+    }
 }

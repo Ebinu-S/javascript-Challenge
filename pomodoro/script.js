@@ -2,9 +2,12 @@ let startTime = 25;
 let timeLimit = startTime*60;
 let percent = 100;
 var timer ;
+let tempStartTime;
 
 let btnToggle = false;
 let timerFinished = false;
+let paused = false;
+
 
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
@@ -22,15 +25,14 @@ function initialiseDisplay(){
 
 function pomodoroMain(){
 
-    if(timeLimit != -1){
+    if(timeLimit != 0){
         timeLimit--;
+        refreshTime();
     }
     else{
-        // alert('endofpomedoro');
         timerEnd();
         clearInterval(timer);
     }
-    refreshTime();
 
 };
 
@@ -45,16 +47,19 @@ function refreshTime() {
     }else{
         btnToggle = false;
         buttonToggler();
+        timerFinished = false;
     }
 };
 
 function timerEnd(){
     audioEL.play();
+
+    //create span message
     const msgEL = document.createElement('span');
     msgEL.classList.add('msg');
     msgEL.innerText = `You have completed one cylce!`
     mainEl.prepend(msgEL);
-    setTimeout(() => {msgEL.remove()}, 3000);
+    // setTimeout(() => {msgEL.remove()}, 3000);
     timeLimit = startTime * 60;
     timerFinished = true;
     refreshTime();
@@ -69,10 +74,10 @@ function updateProgressBar(){
 btn1.addEventListener('click', ()=>{
     if (btnToggle) {
         //reset and restart the timer
+        paused = false;
         timeLimit = startTime * 60;
         clearInterval(timer);
         timer = setInterval(pomodoroMain, 1000);    
-
     }
     else{
         if (startTime > 10) {
@@ -93,11 +98,16 @@ btn2.addEventListener('click', ()=>{
         clearInterval(timer);
         timeLimit = startTime*60;
         btnToggle = false;
+        paused = false;
         buttonToggler();
         refreshTime();
     }
     else{
-        if(startTime <100){
+        if(startTime < 10){
+            startTime+=1;
+            timeLimit = startTime*60;
+        }
+        else if(startTime <60){
             startTime+=5;
             timeLimit = startTime*60;
         }
@@ -109,14 +119,18 @@ btn3.addEventListener('click', ()=>{
     percentCompleteEl.style.opacity = 100;
     if(btnToggle){
         btnToggle = false;
+        paused = true;
         buttonToggler();
-        clearInterval(timer);    
+        tempStartTime = timeLimit/60;
+        clearInterval(timer);
     }
     else{
         btnToggle = true;
         buttonToggler();
-        timeLimit = startTime*60;
-        console.log(timeLimit);
+        if(paused)
+            timeLimit = tempStartTime * 60;
+        else
+            timeLimit = startTime*60;
         timer = setInterval(pomodoroMain, 1000);    
     }
 });
