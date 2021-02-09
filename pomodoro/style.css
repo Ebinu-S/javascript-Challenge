@@ -32,7 +32,7 @@ body {
     background-image: linear-gradient(to bottom, #feae96 0%, #fe0944 74%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .clock{
@@ -46,7 +46,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px 2px #29211e6a;
-    margin: 3rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
 
 }
 
