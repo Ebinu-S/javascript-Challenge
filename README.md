@@ -85,6 +85,10 @@ What I've done so far 🤓👇
 
   ![weather](https://user-images.githubusercontent.com/54814859/107153131-e4849280-6991-11eb-9d15-709e681e0590.png)
 
+* Pomodoro
+
+  ![pom](https://user-images.githubusercontent.com/54814859/107394744-32c89b80-6b22-11eb-8815-020b3900603c.png)
+
 ### Animations
 
 * Auto Text
