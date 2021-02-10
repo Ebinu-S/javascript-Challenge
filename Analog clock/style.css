@@ -10,23 +10,41 @@ body {
     margin: 0;
     background-color: #222831;
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .3s;
     color: #dddddd;
+}
+body.t1{
+    background-color: #120078;
+}
+
+body.t2{
+    background-color: #b83b5e;
 }
 
 .clock{
     width: 450px;
     height: 450px;
-    background-color: #30475ecb;
+    background-color: #30475e;
     border-radius: 50%;
     position: relative;
     border:7px solid #f05454;
     box-shadow: 1px 0px 10px 3px rgba(0,0,0,0.5);
-
+    transition: .3s;
+    z-index: 4;
 }
 
+.clock.t1{
+    background-color: #9d0191;
+    border:7px solid #fd3a69;
+}
+.clock.t2{
+    background-color: #f08a5d;
+    border:7px solid #ddd360 ;
+}
 .number{
     --rotation: 0deg;
     font-size: 2.5rem;
@@ -88,6 +106,9 @@ body {
     /* transition: .5s; */
     transform-origin: bottom;
 }
+.second.t1{
+    background-color: #fecd1a;
+}
 .minute{
     --rotation:0;
     position: absolute;
@@ -101,6 +122,9 @@ body {
     box-shadow: 1px 0px 4px 2px rgba(0,0,0,0.5);
     border-radius: 10px 10px 0 0;
     transform-origin: bottom;
+}
+.minute.t2{
+    background-color: #ddd360;
 }
 .hour{
     --rotation:0;
@@ -117,6 +141,10 @@ body {
     transform-origin: bottom;
 }
 
+.hour.t2{
+    background-color: #fd3a69;
+}
+
 .ball{
     width: 40px;
     height: 40px;
@@ -129,6 +157,15 @@ body {
     border-radius: 50%;
     border: #f05454 2px solid;
     box-shadow: 1px 0px 4px 3px rgba(0,0,0,0.5);
+}
+
+.ball.t1{
+    border: #fd3a69 2px solid;
+}
+
+.ball.t2{
+    border: #f9ed69  2px solid;
+
 }
 
 .digital{
@@ -144,5 +181,71 @@ body {
     border-radius: 10px;
     padding:    0.2rem 1rem;
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5) ;
+    z-index: 8; 
 
+}
+
+.digital.t1{
+    background-color: #690fa5;
+}
+.digital.t2{
+    background-color: #6a2c70;
+}
+
+.digital:hover{
+    z-index: 13;
+}
+
+.btns{
+    background-color: #f05454;
+    width: 450px;
+    height:250px;
+    transform: translateX(-10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 0 30px 30px 0;
+    z-index: 2;
+    padding-left: 0px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(70px);
+    overflow: hidden;
+}
+
+.btns.t1{
+    background-color: #fd3a69;
+}
+.btns.t2{
+    background-color: #cfc558 ;
+}
+
+.btns button{
+    height: 100%;
+    width: 100%;
+    background:none;
+    padding: 10px;
+    border: 0;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+
+.btns button i{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+.btns button:hover{
+    color: #dddddd;
+}
+
+@media(max-width: 600px){
+    .clock{
+        width: 250px;
+        height: 250px;
+    }
 }
