@@ -1,16 +1,30 @@
 const secondHand = document.querySelector('.second');
 const minuteHand = document.querySelector('.minute');
 const hourHand = document.querySelector('.hour');
+const digitalHr = document.querySelector('.digital');
 
 function clockMain() {
     let date = new Date();
-    let seconds = date.getSeconds()/60;
-    let minutes = date.getMinutes()/60;
-    let hours = date.getHours()/12;
+    let seconds = date.getSeconds();
+    let minutes = date.getMinutes();
+    let hours = date.getHours();
 
-    rotateHand(secondHand, seconds);
-    rotateHand(minuteHand, minutes);
-    rotateHand(hourHand, hours);
+    secondsRatio = seconds/60;
+    minutesRatio = (secondsRatio + minutes)/60;
+    hoursRatio = (minutesRatio + hours)/12;
+
+    rotateHand(secondHand, secondsRatio);
+    rotateHand(minuteHand, minutesRatio);
+    rotateHand(hourHand, hoursRatio);
+
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    hours = hours > 12 ? hours - 12 : hours;
+    hours = hours < 10 ? '0' + hours : hours;
+
+    digitalHr.children[0].innerText = hours;
+    digitalHr.children[2].innerText = minutes;
+    digitalHr.children[4].innerText = seconds;
 };
 
 function rotateHand(hand,angle){
@@ -19,6 +33,4 @@ function rotateHand(hand,angle){
 //initialise
 clockMain();
 
-setInterval(() => {
-    clockMain();
-}, 1000);
+setInterval(() => {clockMain();}, 1000);
