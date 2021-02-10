@@ -89,6 +89,13 @@ What I've done so far 🤓👇
 
   ![pom](https://user-images.githubusercontent.com/54814859/107394744-32c89b80-6b22-11eb-8815-020b3900603c.png)
 
+  Be productive!
+
+* Analog Clock
+  
+  ![anlgClk](https://user-images.githubusercontent.com/54814859/107532257-b39b9c00-6be3-11eb-9b3b-83460cbddb43.png)
+
+  What time is it?
 ### Animations
 
 * Auto Text
