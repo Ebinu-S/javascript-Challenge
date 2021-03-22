@@ -7,7 +7,9 @@
 body {
     font-family: "Brygada 1918", serif;
     margin: 0;
-    background-color: #222831;
+    background-image: url('a.jpg');
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +19,19 @@ body {
 
 
 .container{
-    background-color: #393e46;
+    background-color: #393e46dc;
     width: 400px;
     max-width: 100%;
     border-radius: 4px;
     padding: 10px;
     box-shadow: 0 0 4px 2px rgba(0,0,0,0.2);
+    transition: ease-in-out .3s;
+    height: 560px;
+}
+
+.container:hover{
+    background-color: #393e46;
+   
 }
 
 .header{
@@ -106,9 +115,14 @@ body {
     padding: 10px;
     cursor: pointer;
     margin-top: 20px;
-    width: 100%;        
+    width: 100%;     
+    transition:ease-out .5s;   
 }
 
+.form button:hover{
+    background-color: #ffa62b;
+
+}
 .messageBox{
     background-color: #2ecc71;
     padding: 10px 20px;

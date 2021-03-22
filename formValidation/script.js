@@ -3,6 +3,9 @@ const userName = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+const mBox = document.getElementById('messageBox');
+
+let success = true;
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -20,7 +23,8 @@ form.addEventListener('submit', (e)=>{
         returnMessage(email, `Email can't be empty.`, false);
     }
     else if(!isEmail(email.value)){
-        returnMessage(email, `Invalide Email.`, false);
+        console.log(isEmail);
+        returnMessage(email, `Invalid Email.`, false);
     }
     else{
         returnMessage(email, '', true);
@@ -48,19 +52,22 @@ form.addEventListener('submit', (e)=>{
     else{
         returnMessage(password2,``,true);
     }
-
-
 });
 
 function returnMessage(input, message, isSuccess){
     const formControll = input.parentElement;
     if(isSuccess){
         formControll.className = 'form-control success';
+        if (success) {
+            mBox.classList.add('open');
+        }
     }else{
         formControll.className = 'form-control error';
+        success = false;        
     }
     formControll.querySelector('small').innerText = message;  
 };
 
-function isEmail(email) { 
-     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)};
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
