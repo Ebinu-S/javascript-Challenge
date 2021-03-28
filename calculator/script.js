@@ -44,7 +44,16 @@ const opSubract = document.getElementById('subract');
 const opAdd = document.getElementById('add');
 const opEquals = document.getElementById('equals');
 const clearEl = document.getElementById('clear');
-
+if(localStorage.getItem("darkmode")==1)
+{
+    document.body.classList.add('dark');
+    btnsEl.classList.add('dark');
+    containerEL.classList.add('dark');
+ 
+    btns.forEach(btn => {
+        btn.classList.add('dark');
+    });  
+}
 // setting values
 n0.addEventListener('click', ()=> {
     if(opFlag){
@@ -278,14 +287,28 @@ function clearDisp(allClear) {
     decimalFlag = false
  };
 
-// function to toggle theme
+// function to toggle theme+ Setting up local storage to detect previous user selection
 ckbox.addEventListener('click', ()=>{
-
-    document.body.classList.toggle('dark');
-    btnsEl.classList.toggle('dark');
-    containerEL.classList.toggle('dark');
-    h3el.classList.toggle('dark');
+    if(localStorage.getItem("darkmode")==0)
+    {
+    localStorage.setItem("darkmode", "1");
+    document.body.classList.add('dark');
+    btnsEl.classList.add('dark');
+    containerEL.classList.add('dark');
+ 
     btns.forEach(btn => {
-        btn.classList.toggle('dark');
+        btn.classList.add('dark');
     });
+}
+else
+{
+    localStorage.setItem("darkmode", "0");
+    document.body.classList.remove('dark');
+    btnsEl.classList.remove('dark');
+    containerEL.classList.remove('dark');
+    btns.forEach(btn => {
+        btn.classList.remove('dark');
+    });
+
+}
 });
