@@ -8,3 +8,21 @@ body {
     font-family: "Comfortaa", sans-serif;
     margin: 0;
 }
+
+.anim-container{
+    height: 50vh;
+    width: 100%;
+    background-color: #000;
+}
+
+.btns{
+    height:50vh;
+    width: 100%;
+}
+
+.circle{
+    width:50px;
+    height:50px;
+    background-color:blue;
+    border-radius: 50%;
+}

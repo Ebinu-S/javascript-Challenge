@@ -1,6 +1,6 @@
 function fallAnim() { 
     const fallobj = document.createElement('i');
-    fallobj.classList.add("fas");
+    fallobj.classList.add("fasAnim");
     fallobj.classList.add("fa-code");
     fallobj.style.left = Math.random() * window.innerWidth + "px";  
     var rvalue = Math.random(); // random value for size and opacity
